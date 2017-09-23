@@ -31,6 +31,18 @@
     <Filter Include="Object">
       <UniqueIdentifier>{3bde97a9-0f75-49ad-b805-2998e8444360}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Manager\Bitmap">
+      <UniqueIdentifier>{236d4a45-8f30-42a8-bd83-4f614fd03b98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\Tile">
+      <UniqueIdentifier>{d8773ad0-95a5-4739-85f3-b4999552e19c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Player">
+      <UniqueIdentifier>{316202b3-f1ba-4d15-8261-d8c39d1cd7ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Ground">
+      <UniqueIdentifier>{e29730f8-f8a7-46d2-9349-97ef2862ece9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Constant.h">
@@ -63,6 +75,18 @@
     <ClInclude Include="Obj.h">
       <Filter>Object</Filter>
     </ClInclude>
+    <ClInclude Include="BitmapManager.h">
+      <Filter>Manager\Bitmap</Filter>
+    </ClInclude>
+    <ClInclude Include="Tile.h">
+      <Filter>Manager\Tile</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Object\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Ground.h">
+      <Filter>Object\Ground</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -82,6 +106,18 @@
     </ClCompile>
     <ClCompile Include="Obj.cpp">
       <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="BitmapManager.cpp">
+      <Filter>Manager\Bitmap</Filter>
+    </ClCompile>
+    <ClCompile Include="Tile.cpp">
+      <Filter>Manager\Tile</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Object\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Ground.cpp">
+      <Filter>Object\Ground</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

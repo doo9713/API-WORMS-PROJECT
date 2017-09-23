@@ -1,8 +1,8 @@
 #include "Obj.h"
 #include "ObjList.h"
 
-CObj::CObj(const char * _name, TAG _tag, LAYER _layer)
-	: name(_name), tag(_tag), layer(_layer)
+CObj::CObj(const char * _name, TAG _tag, LAYER _layer, MathF::VECTOR _pos)
+	: name(_name), tag(_tag), layer(_layer), Pos(_pos), ClipTime(0)
 {
 }
 
@@ -32,14 +32,4 @@ const string& CObj::_SetName_(const char * _name)
 	name = _name;
 	OBJ.ChangeName(this, temp.data());
 	return name;
-}
-
-void CObj::Update()
-{
-	// TODO : Object Update
-}
-
-void CObj::Render()
-{
-	// TODO : Object Render
 }

@@ -34,8 +34,8 @@ int APIENTRY WinMain(HINSTANCE Inst, HINSTANCE PrevInst, LPSTR CmdLine, int Show
 
 	hWnd = CreateWindow("API Worms", "Worms",
 		WS_OVERLAPPEDWINDOW,
-		CW_USEDEFAULT, CW_USEDEFAULT,
-		CW_USEDEFAULT, CW_USEDEFAULT,
+		50, 50,
+		WINSIZEX, WINSIZEY,
 		nullptr, nullptr, Inst, nullptr);
 
 	ShowWindow(hWnd, Show);

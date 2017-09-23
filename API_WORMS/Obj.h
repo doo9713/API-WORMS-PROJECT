@@ -1,17 +1,23 @@
 #pragma once
 
 #include "Include.h"
+#include "KeyManager.h"
+#include "TimeManager.h"
+#include "BitmapManager.h"
 
 class CObj
 {
-private :
+protected :
+	MathF::VECTOR Pos;
 	TAG tag;
 	LAYER layer;
 	string name;
+	float ClipTime;
 public :
 	CObj(const char * _name = "GameObj",
 		TAG _tag = TAG::Tag_Default,
-		LAYER _layer = LAYER::Layer_Default);
+		LAYER _layer = LAYER::Layer_Default,
+		MathF::VECTOR _pos = MathF::VECTOR(0, 0));
 	~CObj();
 public :
 	_declspec(property(put = _SetTag_, get = _GetTag_)) TAG Tag;
@@ -25,7 +31,7 @@ public :
 	const LAYER& _GetLayer_() const { return layer; }
 	const string& _GetName_() const { return name; }
 public :
-	void Update();
-	void Render();
+	virtual void Update() = 0;
+	virtual void Render() = 0;
 };
 
