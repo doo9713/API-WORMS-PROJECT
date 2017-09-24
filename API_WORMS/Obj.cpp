@@ -1,5 +1,4 @@
 #include "Obj.h"
-#include "ObjList.h"
 
 CObj::CObj(const char * _name, TAG _tag, LAYER _layer, MathF::VECTOR _pos)
 	: name(_name), tag(_tag), layer(_layer), Pos(_pos), ClipTime(0)

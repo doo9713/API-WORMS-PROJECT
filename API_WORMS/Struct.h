@@ -27,6 +27,12 @@ struct MathF
 		{
 			return Vector2(x - other.x, y - other.y);
 		}
+		bool operator==(const Vector2 & other) const
+		{
+			if (x == other.x && y == other.y)
+				return true;
+			return false;
+		}
 
 		double Length() const
 		{

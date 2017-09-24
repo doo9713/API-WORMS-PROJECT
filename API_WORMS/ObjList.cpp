@@ -1,5 +1,6 @@
 #include "ObjList.h"
 #include "Obj.h"
+#include "Player.h"
 
 CObjList::CObjList()
 {
@@ -79,13 +80,43 @@ void CObjList::Render()
 }
 
 void CObjList::ActiveObj(CObj * Obj, TAG Tag)
-{}
+{
+	for (auto object : TagList[Tag])
+	{
+		if (Obj == object)
+			continue;
+		if (Obj->active(*Obj, *object))
+			(Obj->reactive(*Obj, *object));
+	}
+}
 
 void CObjList::ActiveObj(CObj * Obj, LAYER layer)
-{}
+{
+	for (auto object : LayerList[layer])
+	{
+		if (Obj = object)
+			continue;
+	}
+}
 
 void CObjList::ActiveObj(CObj * Obj, string name)
-{}
+{
+	auto iter = NameList.find(name);
+	if (iter == NameList.end())
+		return;
+	
+	for (auto object : iter->second)
+	{
+		if (Obj == object)
+			continue;
+	}
+}
 
 void CObjList::ActiveObj(CObj * Obj)
-{}
+{
+	for (auto object : Active)
+	{
+		if (Obj == object)
+			continue;
+	}
+}

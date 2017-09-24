@@ -1,7 +1,8 @@
 #include "Player.h"
+#include "Ground.h"
 
 CPlayer::CPlayer(const char * _name, TAG _tag, LAYER _layer, MathF::VECTOR _pos)
-	: CObj(_name, _tag, _layer, _pos), index(0)
+	: CObj(_name, _tag, _layer, _pos), index(0), isGround(false)
 {
 	Dir = "R";
 	State = "Idle";
@@ -11,9 +12,27 @@ CPlayer::~CPlayer()
 {
 }
 
+bool CPlayer::active(CObj& My, CObj& Other)
+{
+	MathF::VECTOR checkPos = My.getPos();
+	checkPos.x += 17;
+	checkPos.y += 19;
+	return ((CGround&)Other).IsGroundCheck(checkPos);
+}
+
+void CPlayer::reactive(CObj& My, CObj& Other)
+{
+	isGround = true;
+}
+
 void CPlayer::Update()
 {
 	// TODO : Object Update
+	isGround = false;
+	OBJ.ActiveObj(this, Tag_Ground);
+	if(!isGround)
+		Pos.y += 150 * TIME.Delta();
+
 	State = "Idle";
 	if (KEY.Down(VK_LEFT))
 	{
@@ -28,12 +47,7 @@ void CPlayer::Update()
 		Pos.x += 70 * TIME.Delta();
 	}
 
-	//if (KEY.Push(VK_SPACE))
-	//{
-	//	State = "Jump";
-	//}
-
-	int change = BITMAP.AnimationChange(Name + Dir + State, index);
+	int change = BITMAP.AnimationChange(name + Dir + State, index);
 	if (change != index)
 	{
 		ClipTime = 0;

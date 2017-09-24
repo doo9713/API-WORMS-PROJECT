@@ -78,8 +78,10 @@ BOOL CApp::Initialize()
 
 	OBJ.Insert(new CPlayer("Player", Tag_Player, Layer_Object, MathF::VECTOR(100, 100)));
 
-	OBJ.Insert(new CGround("TopLeft", Tag_Ground, Layer_Object, MathF::VECTOR(200, 200)));
-	OBJ.Insert(new CGround("TopCenter", Tag_Ground, Layer_Object, MathF::VECTOR(264, 200)));
+	OBJ.Insert(new CGround("TopLeft", Tag_Ground, Layer_Object, MathF::VECTOR(64, 600)));
+	for(int i = 0; i<5; ++i)
+		OBJ.Insert(new CGround("TopCenter", Tag_Ground, Layer_Object, MathF::VECTOR(128 + (64 * i), 600)));
+	OBJ.Insert(new CGround("TopRight", Tag_Ground, Layer_Object, MathF::VECTOR(64 * 7, 600)));
 
 	return true;
 }

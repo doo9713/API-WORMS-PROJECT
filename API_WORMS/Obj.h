@@ -4,6 +4,7 @@
 #include "KeyManager.h"
 #include "TimeManager.h"
 #include "BitmapManager.h"
+#include "ObjList.h"
 
 class CObj
 {
@@ -30,6 +31,10 @@ public :
 	const TAG& _GetTag_() const { return tag; }
 	const LAYER& _GetLayer_() const { return layer; }
 	const string& _GetName_() const { return name; }
+	const MathF::VECTOR getPos() const { return Pos; }
+public :
+	virtual bool active(CObj& My, CObj& Other) = 0;
+	virtual void reactive(CObj& My, CObj& Other) = 0;
 public :
 	virtual void Update() = 0;
 	virtual void Render() = 0;
