@@ -5,7 +5,7 @@
 class CGround : public CObj
 {
 private :
-	MathF::VECTOR CollisionPos[64];
+	MathF::VECTOR CollisionPos[TILESIZEXY];
 public :
 	CGround(const char * _name, TAG _tag, LAYER _layer, MathF::VECTOR _pos);
 	~CGround();

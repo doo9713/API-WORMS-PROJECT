@@ -3,7 +3,8 @@
 CGround::CGround(const char * _name, TAG _tag, LAYER _layer, MathF::VECTOR _pos)
 	: CObj(_name, _tag, _layer, _pos)
 {
-	for (int i = 0; i < 64; ++i)
+	int temp = 5;
+	for (int i = temp; i < TILESIZEXY - temp; ++i)
 		CollisionPos[i] = MathF::VECTOR(Pos.x + i, Pos.y);
 }
 
@@ -33,8 +34,10 @@ void CGround::Render()
 
 bool CGround::IsGroundCheck(MathF::VECTOR check)
 {
-	for (int i = 0; i < SIZEXY; ++i)
-		if (MathF::Distance(CollisionPos[i], check) <= HEIGHT / 2 - 4)
+	for (int i = 0; i < TILESIZEXY; ++i)
+		//if (MathF::Distance(CollisionPos[i], check) <= PLAYERHEIGHT / 2 - 4)
+		//	return true;
+		if (MathF::Distance(CollisionPos[i].y, check.y) <= PLAYERHEIGHT / 2 - 4 && CollisionPos[i].x == check.x)
 			return true;
 	return false;
 }

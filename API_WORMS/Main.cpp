@@ -25,7 +25,7 @@ int APIENTRY WinMain(HINSTANCE Inst, HINSTANCE PrevInst, LPSTR CmdLine, int Show
 	wcex.cbWndExtra = 0;
 	wcex.hInstance = Inst;
 	wcex.hIcon = LoadIcon(Inst, IDI_APPLICATION);
-	wcex.hCursor = LoadCursor(nullptr, IDC_ARROW);
+	wcex.hCursor = LoadCursorFromFile("./Resource/mouse.cur");
 	wcex.hbrBackground = (HBRUSH)(COLOR_WINDOW + 1);
 	wcex.lpszMenuName = nullptr;
 	wcex.lpszClassName = "API Worms";

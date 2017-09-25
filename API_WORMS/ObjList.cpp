@@ -66,6 +66,12 @@ void CObjList::Insert(CObj * Obj)
 		iter->second.insert(Obj);
 }
 
+void CObjList::Remove(CObj * Obj)
+{
+	if (Obj == nullptr)
+		return;
+}
+
 void CObjList::Update()
 {
 	for(auto obj : Active)
@@ -96,6 +102,8 @@ void CObjList::ActiveObj(CObj * Obj, LAYER layer)
 	{
 		if (Obj = object)
 			continue;
+		if (Obj->active(*Obj, *object))
+			(Obj->reactive(*Obj, *object));
 	}
 }
 
@@ -109,6 +117,8 @@ void CObjList::ActiveObj(CObj * Obj, string name)
 	{
 		if (Obj == object)
 			continue;
+		if (Obj->active(*Obj, *object))
+			(Obj->reactive(*Obj, *object));
 	}
 }
 
@@ -118,5 +128,7 @@ void CObjList::ActiveObj(CObj * Obj)
 	{
 		if (Obj == object)
 			continue;
+		if (Obj->active(*Obj, *object))
+			(Obj->reactive(*Obj, *object));
 	}
 }

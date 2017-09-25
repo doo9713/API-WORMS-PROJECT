@@ -14,7 +14,7 @@
 #define WINSIZEY 900
 
 /* Player */
-#define HEIGHT 39
+#define PLAYERHEIGHT 39
 
 /* Ground */
-#define SIZEXY 64
+#define TILESIZEXY 64

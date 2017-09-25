@@ -18,6 +18,7 @@ public :
 	void ChangeLayer(CObj * Obj, LAYER Layer);
 	void ChangeName(CObj * Obj, const char * Name);
 	void Insert(CObj * Obj);
+	void Remove(CObj * Obj);
 	void Update();
 	void Render();
 public:

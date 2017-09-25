@@ -31,6 +31,15 @@ BOOL CApp::Initialize()
 		{ 0, 0, WINSIZEX, WINSIZEY }
 	});
 
+	BITMAP.Load("PlayerDrop", "Sheet.bmp",
+	{
+		{ 1, 259, 57, 326 },
+		{ 59, 259, 113, 326 },
+		{ 1, 259, 57, 326 },
+		{ 115, 259, 169, 326 }
+	});
+	BITMAP.LoadAnimation("PlayerRDrop", "PlayerDrop", 0, 3);
+
 	BITMAP.Load("PlayerLeft", "Sheet.bmp",
 	{
 		{ 1, 1, 36, 40 },
