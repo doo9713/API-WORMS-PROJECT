@@ -2,9 +2,9 @@
 #include "Ground.h"
 
 CPlayer::CPlayer(const char * _name, TAG _tag, LAYER _layer, MathF::VECTOR _pos)
-	: CObj(_name, _tag, _layer, _pos), index(0), isGround(false)
+	: CObj(_name, _tag, _layer, _pos), index(0), health(100), isGround(false)
 {
-	Dir = "R";
+	Dir = "L";
 	State = "Drop";
 }
 
@@ -15,6 +15,7 @@ CPlayer::~CPlayer()
 bool CPlayer::active(CObj& My, CObj& Other)
 {
 	MathF::VECTOR checkPos = My.getPos();
+	// Make Value Center
 	if (State == "Drop")
 	{
 		checkPos.x += 26;
@@ -40,6 +41,8 @@ void CPlayer::Update()
 	OBJ.ActiveObj(this, Tag_Ground);
 	if (!isGround) 
 	{
+		if (State != "Drop")
+			State = "Idle";
 		Pos.y += 150 * TIME.Delta();
 	}
 	else
@@ -66,6 +69,7 @@ void CPlayer::Update()
 		index = change;
 	}
 
+	// Anim Time
 	ClipTime += TIME.Delta();
 	if (ClipTime >= 0.14)
 	{

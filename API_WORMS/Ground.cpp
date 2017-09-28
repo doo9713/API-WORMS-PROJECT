@@ -35,9 +35,7 @@ void CGround::Render()
 bool CGround::IsGroundCheck(MathF::VECTOR check)
 {
 	for (int i = 0; i < TILESIZEXY; ++i)
-		//if (MathF::Distance(CollisionPos[i], check) <= PLAYERHEIGHT / 2 - 4)
-		//	return true;
-		if (MathF::Distance(CollisionPos[i].y, check.y) <= PLAYERHEIGHT / 2 - 4 && CollisionPos[i].x == check.x)
+		if (MathF::Distance(CollisionPos[i], check) <= PLAYERHEIGHT / 2 - 4)
 			return true;
 	return false;
 }

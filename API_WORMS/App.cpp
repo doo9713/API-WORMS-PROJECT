@@ -7,6 +7,7 @@
 #include "Tile.h"
 #include "Player.h"
 #include "Ground.h"
+#include "Bar.h"
 
 CApp::CApp()
 {
@@ -31,6 +32,11 @@ BOOL CApp::Initialize()
 		{ 0, 0, WINSIZEX, WINSIZEY }
 	});
 
+	BITMAP.Load("Bar", "bar.bmp",
+	{
+		{ 0, 0, 96, 16 }
+	});
+
 	BITMAP.Load("PlayerDrop", "Sheet.bmp",
 	{
 		{ 1, 259, 57, 326 },
@@ -38,7 +44,7 @@ BOOL CApp::Initialize()
 		{ 1, 259, 57, 326 },
 		{ 115, 259, 169, 326 }
 	});
-	BITMAP.LoadAnimation("PlayerRDrop", "PlayerDrop", 0, 3);
+	BITMAP.LoadAnimation("PlayerLDrop", "PlayerDrop", 0, 3);
 
 	BITMAP.Load("PlayerLeft", "Sheet.bmp",
 	{
@@ -86,7 +92,9 @@ BOOL CApp::Initialize()
 	});
 
 	OBJ.Insert(new CPlayer("Player", Tag_Player, Layer_Object, MathF::VECTOR(100, 100)));
+	OBJ.Insert(new CBar("Bar", Tag_UI, Layer_UI, MathF::VECTOR(10, 10)));
 
+	/* MAKE TEMP MAP */
 	OBJ.Insert(new CGround("TopLeft", Tag_Ground, Layer_Object, MathF::VECTOR(64, 600)));
 	for(int i = 0; i<5; ++i)
 		OBJ.Insert(new CGround("TopCenter", Tag_Ground, Layer_Object, MathF::VECTOR(128 + (64 * i), 600)));

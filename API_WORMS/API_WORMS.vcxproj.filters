@@ -43,6 +43,9 @@
     <Filter Include="Object\Ground">
       <UniqueIdentifier>{e29730f8-f8a7-46d2-9349-97ef2862ece9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Object\Player\Bar">
+      <UniqueIdentifier>{3815fe1a-a188-45fb-b0b5-ef5e3912bd09}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Constant.h">
@@ -87,6 +90,9 @@
     <ClInclude Include="Ground.h">
       <Filter>Object\Ground</Filter>
     </ClInclude>
+    <ClInclude Include="Bar.h">
+      <Filter>Object\Player\Bar</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -118,6 +124,9 @@
     </ClCompile>
     <ClCompile Include="Ground.cpp">
       <Filter>Object\Ground</Filter>
+    </ClCompile>
+    <ClCompile Include="Bar.cpp">
+      <Filter>Object\Player\Bar</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

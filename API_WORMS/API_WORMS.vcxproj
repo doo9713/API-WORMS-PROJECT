@@ -143,6 +143,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="App.h" />
+    <ClInclude Include="Bar.h" />
     <ClInclude Include="BitmapManager.h" />
     <ClInclude Include="Constant.h" />
     <ClInclude Include="Ground.h" />
@@ -159,6 +160,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="App.cpp" />
+    <ClCompile Include="Bar.cpp" />
     <ClCompile Include="BitmapManager.cpp" />
     <ClCompile Include="Ground.cpp" />
     <ClCompile Include="KeyManager.cpp" />
