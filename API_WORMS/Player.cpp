@@ -1,11 +1,13 @@
 #include "Player.h"
 #include "Ground.h"
+#include "Bar.h"
 
 CPlayer::CPlayer(const char * _name, TAG _tag, LAYER _layer, MathF::VECTOR _pos)
 	: CObj(_name, _tag, _layer, _pos), index(0), health(100), isGround(false)
 {
 	Dir = "L";
 	State = "Drop";
+	OBJ.Insert(new CBar("Bar", Tag_UI, Layer_UI, MathF::VECTOR(_pos.x - 25, _pos.y + 40), this));
 }
 
 CPlayer::~CPlayer()

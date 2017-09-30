@@ -16,6 +16,7 @@ public :
 public :
 	void SetHealth(double _Health) { health = _Health; }
 	double GetHealth() { return health; }
+	string GetState() { return State; }
 public :
 	bool active(CObj& My, CObj& Other);
 	void reactive(CObj& My, CObj& Other);

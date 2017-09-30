@@ -92,7 +92,6 @@ BOOL CApp::Initialize()
 	});
 
 	OBJ.Insert(new CPlayer("Player", Tag_Player, Layer_Object, MathF::VECTOR(100, 100)));
-	OBJ.Insert(new CBar("Bar", Tag_UI, Layer_UI, MathF::VECTOR(10, 10)));
 
 	/* MAKE TEMP MAP */
 	OBJ.Insert(new CGround("TopLeft", Tag_Ground, Layer_Object, MathF::VECTOR(64, 600)));

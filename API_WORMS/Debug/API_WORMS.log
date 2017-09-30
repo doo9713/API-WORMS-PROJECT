@@ -1,8 +1,13 @@
-﻿  App.cpp
+﻿  Bar.cpp
 d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(18): warning C4018: '>': signed 또는 unsigned가 일치하지 않습니다.
 d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(30): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
 d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(85): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(86): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-cl : 명령줄 warning D9028: 최소 다시 빌드에 실패했습니다. 정상 빌드로 되돌립니다.
+d:\문서\github\api-worms-project\api_worms\bar.cpp(32): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  코드를 생성하고 있습니다...
+  건너뛰고 있습니다... (관련된 변경 내용 없음)
+  Player.cpp
+  ObjList.cpp
+  App.cpp
   API_WORMS.vcxproj -> D:\문서\GitHub\API-WORMS-PROJECT\API_WORMS\Debug\API_WORMS.exe
   API_WORMS.vcxproj -> D:\문서\GitHub\API-WORMS-PROJECT\API_WORMS\Debug\API_WORMS.pdb (Full PDB)
