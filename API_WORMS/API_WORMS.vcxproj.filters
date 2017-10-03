@@ -46,6 +46,12 @@
     <Filter Include="Object\Player\Bar">
       <UniqueIdentifier>{3815fe1a-a188-45fb-b0b5-ef5e3912bd09}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Object\Player\Bar\Health">
+      <UniqueIdentifier>{0b1adceb-a72c-43aa-9ec2-9194dd884fd0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Player\Bar\FireGage">
+      <UniqueIdentifier>{ad81e05a-a5f0-4ac5-a77f-f7f959d57ed5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Constant.h">
@@ -93,6 +99,12 @@
     <ClInclude Include="Bar.h">
       <Filter>Object\Player\Bar</Filter>
     </ClInclude>
+    <ClInclude Include="Health.h">
+      <Filter>Object\Player\Bar\Health</Filter>
+    </ClInclude>
+    <ClInclude Include="FireGage.h">
+      <Filter>Object\Player\Bar\FireGage</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -127,6 +139,12 @@
     </ClCompile>
     <ClCompile Include="Bar.cpp">
       <Filter>Object\Player\Bar</Filter>
+    </ClCompile>
+    <ClCompile Include="Health.cpp">
+      <Filter>Object\Player\Bar\Health</Filter>
+    </ClCompile>
+    <ClCompile Include="FireGage.cpp">
+      <Filter>Object\Player\Bar\FireGage</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -127,5 +127,8 @@ public :
 	void TransparentBlt(string Name, int Clip, int X, int Y, UINT Color = RGB(0, 0, 0));
 	void LoadBackground(string Path, initializer_list<RECT> Clip);
 	void BltBackGround();
+	void DrawGage(int startX, int startY, int endX, int endY, COLORREF color);
+	void DrawAngle(int posx, int posy, int angle);
+	void DrawAngleReverse(int posx, int posy, int angle);
 };
 

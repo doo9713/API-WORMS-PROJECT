@@ -14,7 +14,7 @@ public:
 	bool active(CObj& My, CObj& Other);
 	void reactive(CObj& My, CObj& Other);
 public:
-	void Update();
-	void Render();
+	virtual void Update() = 0;
+	virtual void Render() = 0;
 };
 

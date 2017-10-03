@@ -88,3 +88,45 @@ void CBitmapManager::BltBackGround()
 		return;
 	::BitBlt(BackBuffer.DC, 0, 0, WINSIZEX, WINSIZEY, iter->second->DC, 0, 0, SRCCOPY);
 }
+
+void CBitmapManager::DrawGage(int startX, int startY, int endX, int endY, COLORREF color)
+{
+	for (int i = startX; i < endX; ++i)
+		for (int j = startY; j < endY; ++j)
+			SetPixel(BackBuffer.DC, i, j, color);
+}
+
+void CBitmapManager::DrawAngle(int posx, int posy, int angle)
+{
+	for (int i = posx; i < posx + ANGLESIZE; ++i)
+		SetPixel(BackBuffer.DC, i, posy, RGB(255, 100, 0));
+	for (int i = posy; i > posy - ANGLESIZE; --i)
+		SetPixel(BackBuffer.DC, posx, i, RGB(255, 100, 0));
+	(BackBuffer.DC, RGB(255, 100, 0));
+
+	double op = (ANGLESIZE * ANGLESIZE) / 90 * angle;
+	MathF::VECTOR dst = { posx + sqrt(ANGLESIZE * ANGLESIZE - op), posy - sqrt(op) };
+	for (int i = 0; i < ANGLESIZE; ++i)
+	{
+		double x = posx + (dst.x - posx) / ANGLESIZE * i;
+		double y = posy - (posy - dst.y) / ANGLESIZE * i;
+		SetPixel(BackBuffer.DC, x, y, RGB(255, 100, 0));
+	}
+}
+
+void CBitmapManager::DrawAngleReverse(int posx, int posy, int angle)
+{
+	for (int i = posx; i > posx - ANGLESIZE; --i)
+		SetPixel(BackBuffer.DC, i, posy, RGB(255, 100, 0));
+	for (int i = posy; i > posy - ANGLESIZE; --i)
+		SetPixel(BackBuffer.DC, posx, i, RGB(255, 100, 0));
+
+	double op = (ANGLESIZE * ANGLESIZE) / 90 * angle;
+	MathF::VECTOR dst = { posx - sqrt(ANGLESIZE * ANGLESIZE - op), posy - sqrt(op) };
+	for (int i = 0; i < ANGLESIZE; ++i)
+	{
+		double x = posx - (posx - dst.x) / ANGLESIZE * i;
+		double y = posy - (posy - dst.y) / ANGLESIZE * i;
+		SetPixel(BackBuffer.DC, x, y, RGB(255, 100, 0));
+	}
+}

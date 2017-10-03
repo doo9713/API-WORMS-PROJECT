@@ -146,7 +146,9 @@
     <ClInclude Include="Bar.h" />
     <ClInclude Include="BitmapManager.h" />
     <ClInclude Include="Constant.h" />
+    <ClInclude Include="FireGage.h" />
     <ClInclude Include="Ground.h" />
+    <ClInclude Include="Health.h" />
     <ClInclude Include="Include.h" />
     <ClInclude Include="KeyManager.h" />
     <ClInclude Include="Macro.h" />
@@ -162,7 +164,9 @@
     <ClCompile Include="App.cpp" />
     <ClCompile Include="Bar.cpp" />
     <ClCompile Include="BitmapManager.cpp" />
+    <ClCompile Include="FireGage.cpp" />
     <ClCompile Include="Ground.cpp" />
+    <ClCompile Include="Health.cpp" />
     <ClCompile Include="KeyManager.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Obj.cpp" />

@@ -8,6 +8,8 @@ private :
 	bool isGround;
 	int index;
 	double health;
+	double angle;
+	double powergage;
 	string Dir;
 	string State;
 public :
@@ -16,6 +18,7 @@ public :
 public :
 	void SetHealth(double _Health) { health = _Health; }
 	double GetHealth() { return health; }
+	double GetGage() { return powergage; }
 	string GetState() { return State; }
 public :
 	bool active(CObj& My, CObj& Other);

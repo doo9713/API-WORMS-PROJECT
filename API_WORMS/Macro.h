@@ -15,6 +15,7 @@
 
 /* Player */
 #define PLAYERHEIGHT 39
+#define ANGLESIZE 40
 
 /* Ground */
 #define TILESIZEXY 64
