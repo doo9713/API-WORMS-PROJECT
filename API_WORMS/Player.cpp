@@ -38,8 +38,15 @@ void CPlayer::reactive(CObj& My, CObj& Other)
 	isGround = true;
 }
 
-void CPlayer::Update()
+bool CPlayer::Update()
 {
+	// Test
+	if (KEY.Down('A'))
+	{
+		OBJ.Remove(this);
+		return false;
+	}
+
 	// TODO : Object Update
 	isGround = false;
 	OBJ.ActiveObj(this, Tag_Ground);
@@ -68,8 +75,8 @@ void CPlayer::Update()
 		if (KEY.Down(VK_UP))
 		{
 			angle += 100 * TIME.Delta();
-			if (angle > 90)
-				angle = 90;
+			if (angle > 89)
+				angle = 89;
 		}
 		else if (KEY.Down(VK_DOWN))
 		{
@@ -88,6 +95,12 @@ void CPlayer::Update()
 			powergage = 0;
 	}
 
+	if (State == "Idle")
+	{
+		string tmp = to_string((int)angle / 30 + 1);
+		State += tmp;
+	}
+
 	int change = BITMAP.AnimationChange(name + Dir + State, index);
 	if (change != index)
 	{
@@ -102,6 +115,8 @@ void CPlayer::Update()
 		ClipTime -= 0.14;
 		index = BITMAP.AnimationUpdate(name + Dir + State, index);
 	}
+
+	return true;
 }
 
 void CPlayer::Render()

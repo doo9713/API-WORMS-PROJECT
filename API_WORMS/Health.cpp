@@ -11,10 +11,11 @@ CHealth::~CHealth()
 {
 }
 
-void CHealth::Update()
+bool CHealth::Update()
 {
 	Pos.x = super->getPos().x - 25;
 	Pos.y = super->getPos().y + 40;
+	return true;
 }
 
 void CHealth::Render()

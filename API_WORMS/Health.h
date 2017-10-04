@@ -6,7 +6,9 @@ public:
 	CHealth(const char * _name, TAG _tag, LAYER _layer, MathF::VECTOR _pos, CPlayer * const _super);
 	~CHealth();
 public:
-	void Update();
+	void Destroy() { this->~CHealth(); }
+public:
+	bool Update();
 	void Render();
 };
 

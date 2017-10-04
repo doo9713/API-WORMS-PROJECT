@@ -8,7 +8,9 @@ public:
 	CFireGage(const char * _name, TAG _tag, LAYER _layer, MathF::VECTOR _pos, CPlayer * const _super);
 	~CFireGage();
 public:
-	void Update();
+	void Destroy() { this->~CFireGage(); }
+public:
+	bool Update();
 	void Render();
 };
 

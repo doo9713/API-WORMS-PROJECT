@@ -21,9 +21,10 @@ void CGround::reactive(CObj& My, CObj& Other)
 {
 }
 
-void CGround::Update()
+bool CGround::Update()
 {
 	// TODO : Object Update
+	return true;
 }
 
 void CGround::Render()

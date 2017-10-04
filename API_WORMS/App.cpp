@@ -48,35 +48,40 @@ BOOL CApp::Initialize()
 
 	BITMAP.Load("PlayerLeft", "Sheet.bmp",
 	{
-		{ 1, 1, 36, 40 },
-		{ 38, 1, 73, 40 },
-		{ 112, 1, 147, 40 },
 		{ 75, 1, 110, 40 },
+		{ 1, 1, 36, 40 },
 		{ 149, 1, 184, 40 },
-	
+		{ 223, 42, 258, 81 },
+		{ 186, 42, 221, 81 },
+		{ 260, 42, 295, 81 }
 	});
-	BITMAP.LoadAnimation("PlayerLIdle", "PlayerLeft", 0, 0);
-	BITMAP.LoadAnimation("PlayerLMove", "PlayerLeft", 3, 4);
+	BITMAP.LoadAnimation("PlayerLIdle1", "PlayerLeft", 3, 3);
+	BITMAP.LoadAnimation("PlayerLIdle2", "PlayerLeft", 4, 4);
+	BITMAP.LoadAnimation("PlayerLIdle3", "PlayerLeft", 5, 5);
+	BITMAP.LoadAnimation("PlayerLMove", "PlayerLeft", 0, 2);
 
 	BITMAP.Load("PlayerRight", "SheetReverse.bmp", 
 	{
-		{ 1883, 1, 1918, 40 },
-		{ 1846, 1, 1881, 40 },
-		{ 1772, 1, 1807, 40 },
 		{ 1809, 1, 1844, 40 },
-		{ 1735, 1, 1770, 40 }
+		{ 1883, 1, 1918, 40 },
+		{ 1735, 1, 1770, 40 },
+		{ 1661, 42, 1696, 81 },
+		{ 1698, 42, 1733, 81 },
+		{ 1624, 42, 1659, 81 }
 	});
-	BITMAP.LoadAnimation("PlayerRIdle", "PlayerRight", 0, 0);
-	BITMAP.LoadAnimation("PlayerRMove", "PlayerRight", 3, 4);
+	BITMAP.LoadAnimation("PlayerRIdle1", "PlayerRight", 3, 3);
+	BITMAP.LoadAnimation("PlayerRIdle2", "PlayerRight", 4, 4);
+	BITMAP.LoadAnimation("PlayerRIdle3", "PlayerRight", 5, 5);
+	BITMAP.LoadAnimation("PlayerRMove", "PlayerRight", 0, 2);
 
-	BITMAP.Load("PlayerJump", "Sheet.bmp", 
-	{
-		{ 186, 1, 221, 40 },
-		{ 186, 1, 221, 40 },
-		{ 1152, 1, 1187, 40 },
-		{ 1152, 1, 1187, 40 }
-	});
-	BITMAP.LoadAnimation("PlayerLJump", "PlayerJump", 0, 3);
+	//BITMAP.Load("PlayerJump", "Sheet.bmp", 
+	//{
+	//	{ 186, 1, 221, 40 },
+	//	{ 186, 1, 221, 40 },
+	//	{ 1152, 1, 1187, 40 },
+	//	{ 1152, 1, 1187, 40 }
+	//});
+	//BITMAP.LoadAnimation("PlayerLJump", "PlayerJump", 0, 3);
 
 	BITMAP.Load("TopLeft", "MapTile/1.bmp", 
 	{

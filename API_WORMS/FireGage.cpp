@@ -11,12 +11,13 @@ CFireGage::~CFireGage()
 {
 }
 
-void CFireGage::Update()
+bool CFireGage::Update()
 { 
 	Pos.x = super->getPos().x - 25;
 	Pos.y = super->getPos().y + 56;
 
 	rate = (double)94 / 100 * super->GetGage();
+	return true;
 }
 
 void CFireGage::Render()

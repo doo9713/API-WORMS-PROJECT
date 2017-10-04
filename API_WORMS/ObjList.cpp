@@ -9,9 +9,7 @@ CObjList::CObjList()
 CObjList::~CObjList()
 {
 	for (auto obj : Active)
-	{
 		delete obj;
-	}
 }
 
 void CObjList::ChangeTag(CObj * Obj, TAG Tag)
@@ -70,12 +68,58 @@ void CObjList::Remove(CObj * Obj)
 {
 	if (Obj == nullptr)
 		return;
+
+	for (auto iter : Active) 
+	{
+		if (iter == Obj)
+		{
+			Active.erase(iter);
+			break;
+		}
+	}
+	for (auto iter : TagList[Obj->Tag]) 
+	{
+		if (iter == Obj)
+		{
+			TagList[Obj->Tag].erase(iter);
+			break;
+		}
+	}
+	for (auto iter : LayerList[Obj->Layer])
+	{
+		if (iter == Obj)
+		{
+			LayerList[Obj->Layer].erase(iter);
+			break;
+		}
+	}
+
+	auto temp = NameList.find(Obj->Name);
+	for (auto iter : temp->second)
+	{
+		if (iter == Obj)
+		{
+			temp->second.erase(iter);
+			break;
+		}
+	}
 }
 
 void CObjList::Update()
 {
-	for(auto obj : Active)
-		obj->Update();
+	CObj * del = nullptr;
+	for (auto obj : Active)
+	{
+		if (!obj->Update())
+		{
+			del = obj;
+			Remove(obj);
+			break;
+		}
+	}
+
+	if(del != nullptr)
+		del->Destroy();
 }
 
 void CObjList::Render()
