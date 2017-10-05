@@ -114,6 +114,7 @@ void CObjList::Update()
 		{
 			del = obj;
 			Remove(obj);
+			Update();
 			break;
 		}
 	}

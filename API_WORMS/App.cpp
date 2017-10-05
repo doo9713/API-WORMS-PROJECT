@@ -27,16 +27,19 @@ BOOL CApp::Initialize()
 	FrameTime = 0;
 
 	// TODO : Initialize Game
-	BITMAP.LoadBackground("BG.bmp", 
+	/* BackGround */
+	BITMAP.LoadBackground("BG.bmp",
 	{
 		{ 0, 0, WINSIZEX, WINSIZEY }
 	});
 
+	/* UI */
 	BITMAP.Load("Bar", "bar.bmp",
 	{
 		{ 0, 0, 96, 16 }
 	});
 
+	/* Player */
 	BITMAP.Load("PlayerDrop", "Sheet.bmp",
 	{
 		{ 1, 259, 57, 326 },
@@ -83,6 +86,33 @@ BOOL CApp::Initialize()
 	//});
 	//BITMAP.LoadAnimation("PlayerLJump", "PlayerJump", 0, 3);
 
+	/* Bomb */
+	BITMAP.Load("Bomb", "Bomb.bmp",
+	{
+		{ 0, 0, 16, 16 }
+	});
+
+	/* Explosion */
+	BITMAP.Load("Explosion", "Explo.bmp",
+	{
+		{ 0, 1, 36, 38 },
+		{ 37, 1, 72, 38 },
+		{ 73 ,1, 108, 38 },
+		{ 109, 1, 144, 38 },
+		{ 145 ,1, 180, 38 },
+		{ 181, 1, 216, 38 },
+		{ 0, 39, 36, 75 },
+		{ 37, 39, 72, 75 },
+		{ 73 ,39, 108, 75 },
+		{ 109, 39, 144, 75 },
+		{ 145 ,39, 180, 75 },
+		{ 181, 39, 216, 75 },
+		{ 0, 76, 36, 112 },
+		{ 37, 76, 72, 112 }
+	});
+	BITMAP.LoadAnimation("Explosion", "Explosion", 0, 13);
+
+	/* Map Test */
 	BITMAP.Load("TopLeft", "MapTile/1.bmp", 
 	{
 		{ 0, 0, 64, 64 }

@@ -22,6 +22,7 @@ public :
 	double GetHealth() { return health; }
 	double GetGage() { return powergage; }
 	string GetState() { return State; }
+	MathF::VECTOR GetCenter() { return Pos + 18; }
 public :
 	bool active(CObj& My, CObj& Other);
 	void reactive(CObj& My, CObj& Other);

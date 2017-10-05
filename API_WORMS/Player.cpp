@@ -2,6 +2,7 @@
 #include "Ground.h"
 #include "Health.h"
 #include "FireGage.h"
+#include "Bomb.h"
 
 CPlayer::CPlayer(const char * _name, TAG _tag, LAYER _layer, MathF::VECTOR _pos)
 	: CObj(_name, _tag, _layer, _pos), index(0), health(100), angle(45), powergage(0), isGround(false)
@@ -40,13 +41,6 @@ void CPlayer::reactive(CObj& My, CObj& Other)
 
 bool CPlayer::Update()
 {
-	// Test
-	if (KEY.Down('A'))
-	{
-		OBJ.Remove(this);
-		return false;
-	}
-
 	// TODO : Object Update
 	isGround = false;
 	OBJ.ActiveObj(this, Tag_Ground);
@@ -75,24 +69,27 @@ bool CPlayer::Update()
 		if (KEY.Down(VK_UP))
 		{
 			angle += 100 * TIME.Delta();
-			if (angle > 89)
-				angle = 89;
+			angle = MathF::Clamp(angle, 1.0, 89.0);
 		}
 		else if (KEY.Down(VK_DOWN))
 		{
 			angle -= 100 * TIME.Delta();
-			if (angle < 1)
-				angle = 1;
+			angle = MathF::Clamp(angle, 1.0, 89.0);
 		}
 
 		if (KEY.Down(VK_SPACE))
 		{
 			powergage += 100 * TIME.Delta();
-			if (powergage > 100)
-				powergage = 100;
+			powergage = MathF::Clamp(powergage, 0.0, 100.0);
 		}
-		else
+		else if (KEY.Pull(VK_SPACE))
+		{
+			if (Dir == "R")
+				OBJ.Insert(new CBomb("Missle", Tag_Bullet, Layer_Object, MathF::VECTOR(Pos.x + 25, Pos.y + 5), powergage, angle, 1));
+			else
+				OBJ.Insert(new CBomb("Missle", Tag_Bullet, Layer_Object, MathF::VECTOR(Pos.x - 10, Pos.y + 5), powergage, angle, -1));
 			powergage = 0;
+		}
 	}
 
 	if (State == "Idle")

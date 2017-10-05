@@ -52,6 +52,12 @@
     <Filter Include="Object\Player\Bar\FireGage">
       <UniqueIdentifier>{ad81e05a-a5f0-4ac5-a77f-f7f959d57ed5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Object\Player\Bomb">
+      <UniqueIdentifier>{b7fcd65a-7ef4-4bca-90c4-ca94517d5ded}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Particle">
+      <UniqueIdentifier>{dc55626b-3e8d-4f90-9bba-dc3643f873d9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Constant.h">
@@ -105,6 +111,12 @@
     <ClInclude Include="FireGage.h">
       <Filter>Object\Player\Bar\FireGage</Filter>
     </ClInclude>
+    <ClInclude Include="Bomb.h">
+      <Filter>Object\Player\Bomb</Filter>
+    </ClInclude>
+    <ClInclude Include="Explosion.h">
+      <Filter>Object\Particle</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -145,6 +157,12 @@
     </ClCompile>
     <ClCompile Include="FireGage.cpp">
       <Filter>Object\Player\Bar\FireGage</Filter>
+    </ClCompile>
+    <ClCompile Include="Bomb.cpp">
+      <Filter>Object\Player\Bomb</Filter>
+    </ClCompile>
+    <ClCompile Include="Explosion.cpp">
+      <Filter>Object\Particle</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

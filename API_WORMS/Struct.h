@@ -107,7 +107,7 @@ struct MathF
 			After = ++Line.begin();
 			while (After != Line.end())
 			{
-				Line.push_front(Lerp(Data, *Before, *After));
+				*Before = (*After - *Before) * Data + *Before;
 				++Before;
 				++After;
 			}
