@@ -19,18 +19,3 @@ void CBar::reactive(CObj& My, CObj& Other)
 {
 
 }
-
-//void CBar::Update()
-//{
-//	Pos.x = super->getPos().x - 25;
-//	Pos.y = super->getPos().y + 40;
-//}
-//
-//void CBar::Render()
-//{
-//	if (super->GetState() != "Drop")
-//	{
-//		BITMAP.BitBlt("Bar", 0, Pos.x, Pos.y);
-//		BITMAP.DrawGage(Pos.x + 1, Pos.y + 1, Pos.x + 94, Pos.y + 15, RGB(255, 255, 0));
-//	}
-//}

@@ -1,4 +1,5 @@
 #include "Explosion.h"
+#include "Player.h"
 
 CExplosion::CExplosion(const char * _name, TAG _tag, LAYER _layer, MathF::VECTOR _pos)
 	: CObj(_name, _tag, _layer, _pos), index(0)
@@ -19,10 +20,16 @@ void CExplosion::reactive(CObj& My, CObj& Other)
 
 }
 
-bool CExplosion::Update()
+void CExplosion::Update()
 {
 	if (index == 13)
-		return false;
+	{
+		CPlayer::TurnChange();
+		OBJ.Remove(this);
+		return;
+	}
+
+	BITMAP.SetScroll(Pos.x - 800, Pos.y - 650);
 
 	ClipTime += TIME.Delta();
 	if (ClipTime >= 0.04)
@@ -30,8 +37,6 @@ bool CExplosion::Update()
 		ClipTime -= 0.04;
 		index = BITMAP.AnimationUpdate("Explosion", index);
 	}
-
-	return true;
 }
 
 void CExplosion::Render()

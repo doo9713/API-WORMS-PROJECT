@@ -4,6 +4,10 @@
 #include "FireGage.h"
 #include "Bomb.h"
 
+bool CPlayer::isOver = false;
+int CPlayer::playerTurn = 0;
+string CPlayer::playerList[2] = { "Player1", "Player2" };
+
 CPlayer::CPlayer(const char * _name, TAG _tag, LAYER _layer, MathF::VECTOR _pos)
 	: CObj(_name, _tag, _layer, _pos), index(0), health(100), angle(45), powergage(0), isGround(false)
 {
@@ -31,27 +35,37 @@ bool CPlayer::active(CObj& My, CObj& Other)
 		checkPos.x += 17;
 		checkPos.y += 19;
 	}
-	return ((CGround&)Other).IsGroundCheck(checkPos);
+	return ((CGround&)Other).IsGroundCheck(checkPos, PLAYERHEIGHT / 2 - 4);
 }
 
 void CPlayer::reactive(CObj& My, CObj& Other)
 {
+	State = "Idle";
 	isGround = true;
 }
 
-bool CPlayer::Update()
+void CPlayer::Update()
 {
 	// TODO : Object Update
+	if (health <= 0)
+	{
+		OBJ.Remove(this);
+		return;
+	}
+
 	isGround = false;
 	OBJ.ActiveObj(this, Tag_Ground);
+
 	if (!isGround) 
 	{
 		if (State != "Drop")
 			State = "Idle";
 		Pos.y += 150 * TIME.Delta();
 	}
-	else
+	else if (playerList[playerTurn] == name && !isOver)
 	{
+		BITMAP.SetScroll(Pos.x - 800, Pos.y - 650);
+
 		State = "Idle";
 		if (KEY.Down(VK_LEFT))
 		{
@@ -85,10 +99,11 @@ bool CPlayer::Update()
 		else if (KEY.Pull(VK_SPACE))
 		{
 			if (Dir == "R")
-				OBJ.Insert(new CBomb("Missle", Tag_Bullet, Layer_Object, MathF::VECTOR(Pos.x + 25, Pos.y + 5), powergage, angle, 1));
+				OBJ.Insert(new CBomb("Bomb", Tag_Bullet, Layer_Object, MathF::VECTOR(Pos.x + 25, Pos.y + 5), powergage, angle, 1));
 			else
-				OBJ.Insert(new CBomb("Missle", Tag_Bullet, Layer_Object, MathF::VECTOR(Pos.x - 10, Pos.y + 5), powergage, angle, -1));
+				OBJ.Insert(new CBomb("Bomb", Tag_Bullet, Layer_Object, MathF::VECTOR(Pos.x - 12, Pos.y + 5), powergage, angle, -1));
 			powergage = 0;
+			isOver = true;
 		}
 	}
 
@@ -98,7 +113,7 @@ bool CPlayer::Update()
 		State += tmp;
 	}
 
-	int change = BITMAP.AnimationChange(name + Dir + State, index);
+	int change = BITMAP.AnimationChange("Player" + Dir + State, index);
 	if (change != index)
 	{
 		ClipTime = 0;
@@ -110,16 +125,14 @@ bool CPlayer::Update()
 	if (ClipTime >= 0.14)
 	{
 		ClipTime -= 0.14;
-		index = BITMAP.AnimationUpdate(name + Dir + State, index);
+		index = BITMAP.AnimationUpdate("Player" + Dir + State, index);
 	}
-
-	return true;
 }
 
 void CPlayer::Render()
 {
 	// TODO : Object Render
-	BITMAP.AnimationTransparentBlt(name + Dir + State, index, Pos.x, Pos.y);
+	BITMAP.AnimationTransparentBlt("Player" + Dir + State, index, Pos.x, Pos.y);
 	if (State != "Drop")
 	{
 		if (Dir == "R")

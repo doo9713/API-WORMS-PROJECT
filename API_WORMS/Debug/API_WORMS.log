@@ -1,8 +1,110 @@
-﻿  Bomb.cpp
+﻿  TimeUI.cpp
 d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(18): warning C4018: '>': signed 또는 unsigned가 일치하지 않습니다.
 d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(30): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
 d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(85): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(86): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-d:\문서\github\api-worms-project\api_worms\bomb.cpp(61): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\player.h(26): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  BitmapManager.cpp
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(18): warning C4018: '>': signed 또는 unsigned가 일치하지 않습니다.
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(30): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(85): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(86): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.cpp(130): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.cpp(147): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  코드를 생성하고 있습니다...
+  컴파일하고 있습니다...
+  Tile.cpp
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(18): warning C4018: '>': signed 또는 unsigned가 일치하지 않습니다.
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(30): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(85): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(86): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\tile.cpp(22): warning C4018: '>=': signed 또는 unsigned가 일치하지 않습니다.
+  Player.cpp
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(18): warning C4018: '>': signed 또는 unsigned가 일치하지 않습니다.
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(30): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(85): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(86): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\player.h(26): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\player.cpp(67): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\player.cpp(124): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\player.cpp(127): warning C4305: '-=': 'double'에서 'float'(으)로 잘립니다.
+d:\문서\github\api-worms-project\api_worms\player.cpp(135): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\player.cpp(139): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\player.cpp(141): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  ObjList.cpp
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(18): warning C4018: '>': signed 또는 unsigned가 일치하지 않습니다.
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(30): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(85): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(86): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\player.h(26): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Obj.cpp
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(18): warning C4018: '>': signed 또는 unsigned가 일치하지 않습니다.
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(30): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(85): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(86): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  MainMenu.cpp
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(18): warning C4018: '>': signed 또는 unsigned가 일치하지 않습니다.
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(30): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(85): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(86): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Health.cpp
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(18): warning C4018: '>': signed 또는 unsigned가 일치하지 않습니다.
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(30): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(85): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(86): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\player.h(26): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\health.cpp(32): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\health.cpp(33): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Ground.cpp
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(18): warning C4018: '>': signed 또는 unsigned가 일치하지 않습니다.
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(30): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(85): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(86): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\ground.cpp(34): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  GamePlay.cpp
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(18): warning C4018: '>': signed 또는 unsigned가 일치하지 않습니다.
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(30): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(85): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(86): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\player.h(26): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  FireGage.cpp
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(18): warning C4018: '>': signed 또는 unsigned가 일치하지 않습니다.
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(30): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(85): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(86): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\player.h(26): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\firegage.cpp(32): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\firegage.cpp(33): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Explosion.cpp
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(18): warning C4018: '>': signed 또는 unsigned가 일치하지 않습니다.
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(30): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(85): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(86): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\player.h(26): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\explosion.cpp(32): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\explosion.cpp(34): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\explosion.cpp(37): warning C4305: '-=': 'double'에서 'float'(으)로 잘립니다.
+d:\문서\github\api-worms-project\api_worms\explosion.cpp(44): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Bomb.cpp
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(18): warning C4018: '>': signed 또는 unsigned가 일치하지 않습니다.
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(30): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(85): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(86): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\player.h(26): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\bomb.cpp(54): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\bomb.cpp(65): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Bar.cpp
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(18): warning C4018: '>': signed 또는 unsigned가 일치하지 않습니다.
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(30): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(85): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(86): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\player.h(26): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  App.cpp
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(18): warning C4018: '>': signed 또는 unsigned가 일치하지 않습니다.
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(30): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(85): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(86): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\player.h(26): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  코드를 생성하고 있습니다...
   API_WORMS.vcxproj -> D:\문서\GitHub\API-WORMS-PROJECT\API_WORMS\Debug\API_WORMS.exe
   API_WORMS.vcxproj -> D:\문서\GitHub\API-WORMS-PROJECT\API_WORMS\Debug\API_WORMS.pdb (Full PDB)

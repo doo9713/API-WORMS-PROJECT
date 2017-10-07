@@ -33,12 +33,11 @@ public :
 	const string& _GetName_() const { return name; }
 	const MathF::VECTOR getPos() const { return Pos; }
 public :
-	void Destroy() { this->~CObj(); }
-public :
+	virtual void Destroy() = 0;
 	virtual bool active(CObj& My, CObj& Other) = 0;
 	virtual void reactive(CObj& My, CObj& Other) = 0;
 public :
-	virtual bool Update() = 0;
+	virtual void Update() = 0;
 	virtual void Render() = 0;
 };
 

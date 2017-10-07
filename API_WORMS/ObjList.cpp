@@ -69,14 +69,6 @@ void CObjList::Remove(CObj * Obj)
 	if (Obj == nullptr)
 		return;
 
-	for (auto iter : Active) 
-	{
-		if (iter == Obj)
-		{
-			Active.erase(iter);
-			break;
-		}
-	}
 	for (auto iter : TagList[Obj->Tag]) 
 	{
 		if (iter == Obj)
@@ -89,7 +81,7 @@ void CObjList::Remove(CObj * Obj)
 	{
 		if (iter == Obj)
 		{
-			LayerList[Obj->Layer].erase(iter);
+			iter->Layer = Layer_Del;
 			break;
 		}
 	}
@@ -105,27 +97,35 @@ void CObjList::Remove(CObj * Obj)
 	}
 }
 
-void CObjList::Update()
+void CObjList::Delete(CObj * Obj)
 {
-	CObj * del = nullptr;
-	for (auto obj : Active)
+	if (Obj == nullptr)
+		return;
+
+	for (auto iter : Active)
 	{
-		if (!obj->Update())
+		if (iter == Obj)
 		{
-			del = obj;
-			Remove(obj);
-			Update();
+			Active.erase(iter);
 			break;
 		}
 	}
+}
 
-	if(del != nullptr)
-		del->Destroy();
+void CObjList::Update()
+{
+	for (auto obj : Active)
+		obj->Update();
+
+	for (auto obj : LayerList[Layer_Del])
+		OBJ.Delete(obj);
+
+	LayerList[Layer_Del].clear();
 }
 
 void CObjList::Render()
 {
-	for (int i = 0; i < Layer_End; ++i)
+	for (int i = 0; i < Layer_Del; ++i)
 		for (auto obj : LayerList[i])
 			obj->Render();
 }
@@ -176,4 +176,12 @@ void CObjList::ActiveObj(CObj * Obj)
 		if (Obj->active(*Obj, *object))
 			(Obj->reactive(*Obj, *object));
 	}
+}
+
+bool CObjList::CheckAllGround()
+{
+	for (auto iter : TagList[Tag_Player])
+		if (((CPlayer*)iter)->GetState() == "Drop")
+			return false;
+	return true;
 }

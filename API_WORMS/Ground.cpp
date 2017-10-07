@@ -5,7 +5,9 @@ CGround::CGround(const char * _name, TAG _tag, LAYER _layer, MathF::VECTOR _pos)
 {
 	int temp = 5;
 	for (int i = temp; i < TILESIZEXY - temp; ++i)
+	{
 		CollisionPos[i] = MathF::VECTOR(Pos.x + i, Pos.y);
+	}
 }
 
 CGround::~CGround()
@@ -21,10 +23,9 @@ void CGround::reactive(CObj& My, CObj& Other)
 {
 }
 
-bool CGround::Update()
+void CGround::Update()
 {
 	// TODO : Object Update
-	return true;
 }
 
 void CGround::Render()
@@ -33,10 +34,10 @@ void CGround::Render()
 	BITMAP.TransparentBlt(name, 0, Pos.x, Pos.y, RGB(255,255,255));
 }
 
-bool CGround::IsGroundCheck(MathF::VECTOR check)
+bool CGround::IsGroundCheck(MathF::VECTOR check, int data)
 {
 	for (int i = 0; i < TILESIZEXY; ++i)
-		if (MathF::Distance(CollisionPos[i], check) <= PLAYERHEIGHT / 2 - 4)
+		if (MathF::Distance(CollisionPos[i], check) <= data)
 			return true;
 	return false;
 }

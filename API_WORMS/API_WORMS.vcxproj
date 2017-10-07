@@ -148,11 +148,13 @@
     <ClInclude Include="Constant.h" />
     <ClInclude Include="Explosion.h" />
     <ClInclude Include="FireGage.h" />
+    <ClInclude Include="GamePlay.h" />
     <ClInclude Include="Ground.h" />
     <ClInclude Include="Health.h" />
     <ClInclude Include="Include.h" />
     <ClInclude Include="KeyManager.h" />
     <ClInclude Include="Macro.h" />
+    <ClInclude Include="MainMenu.h" />
     <ClInclude Include="Manager.h" />
     <ClInclude Include="Bomb.h" />
     <ClInclude Include="Obj.h" />
@@ -161,6 +163,7 @@
     <ClInclude Include="Struct.h" />
     <ClInclude Include="Tile.h" />
     <ClInclude Include="TimeManager.h" />
+    <ClInclude Include="TimeUI.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="App.cpp" />
@@ -168,16 +171,19 @@
     <ClCompile Include="BitmapManager.cpp" />
     <ClCompile Include="Explosion.cpp" />
     <ClCompile Include="FireGage.cpp" />
+    <ClCompile Include="GamePlay.cpp" />
     <ClCompile Include="Ground.cpp" />
     <ClCompile Include="Health.cpp" />
     <ClCompile Include="KeyManager.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Bomb.cpp" />
+    <ClCompile Include="MainMenu.cpp" />
     <ClCompile Include="Obj.cpp" />
     <ClCompile Include="ObjList.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Tile.cpp" />
     <ClCompile Include="TimeManager.cpp" />
+    <ClCompile Include="TimeUI.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

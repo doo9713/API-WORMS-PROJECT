@@ -20,7 +20,7 @@ public:
 	bool active(CObj& My, CObj& Other);
 	void reactive(CObj& My, CObj& Other);
 public :
-	bool Update();
+	void Update();
 	void Render();
 };
 

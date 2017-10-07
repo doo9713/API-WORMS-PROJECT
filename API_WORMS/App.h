@@ -4,14 +4,14 @@
 
 class CApp
 {
-private :
+protected:
 	double FrameTime;
 public :
 	CApp();
 	~CApp();
 public :
-	BOOL Initialize();
-	BOOL Update();
-	void Render();
+	virtual BOOL Initialize() = 0;
+	virtual BOOL Update() = 0;
+	virtual void Render() = 0;
 };
 

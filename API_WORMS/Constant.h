@@ -8,6 +8,7 @@ enum LAYER
 	Layer_Object,
 	Layer_Particle,
 	Layer_UI,
+	Layer_Del,
 	Layer_End
 };
 

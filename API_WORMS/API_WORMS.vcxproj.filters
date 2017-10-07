@@ -43,20 +43,35 @@
     <Filter Include="Object\Ground">
       <UniqueIdentifier>{e29730f8-f8a7-46d2-9349-97ef2862ece9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Object\Player\Bar">
-      <UniqueIdentifier>{3815fe1a-a188-45fb-b0b5-ef5e3912bd09}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Object\Player\Bar\Health">
-      <UniqueIdentifier>{0b1adceb-a72c-43aa-9ec2-9194dd884fd0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Object\Player\Bar\FireGage">
-      <UniqueIdentifier>{ad81e05a-a5f0-4ac5-a77f-f7f959d57ed5}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Object\Player\Bomb">
       <UniqueIdentifier>{b7fcd65a-7ef4-4bca-90c4-ca94517d5ded}</UniqueIdentifier>
     </Filter>
     <Filter Include="Object\Particle">
       <UniqueIdentifier>{dc55626b-3e8d-4f90-9bba-dc3643f873d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="App\GamePlay">
+      <UniqueIdentifier>{d8b3e2f5-6fc4-4678-aed4-8366b7fe099e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="App\MainMenu">
+      <UniqueIdentifier>{6666e90a-b9e1-444e-92a8-338cf5c6ea24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\UI">
+      <UniqueIdentifier>{fba366eb-9c11-4b4b-aa8e-49235077e7bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\UI\TimeUI">
+      <UniqueIdentifier>{3ebe1ade-35ee-42ad-899e-71dca2cc2070}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\UI\Button">
+      <UniqueIdentifier>{447d5d82-cf4f-4d88-ba22-197ff4b51700}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\UI\Bar">
+      <UniqueIdentifier>{3815fe1a-a188-45fb-b0b5-ef5e3912bd09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\UI\Bar\Health">
+      <UniqueIdentifier>{0b1adceb-a72c-43aa-9ec2-9194dd884fd0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\UI\Bar\FireGage">
+      <UniqueIdentifier>{ad81e05a-a5f0-4ac5-a77f-f7f959d57ed5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -103,19 +118,28 @@
       <Filter>Object\Ground</Filter>
     </ClInclude>
     <ClInclude Include="Bar.h">
-      <Filter>Object\Player\Bar</Filter>
+      <Filter>Object\UI\Bar</Filter>
     </ClInclude>
     <ClInclude Include="Health.h">
-      <Filter>Object\Player\Bar\Health</Filter>
+      <Filter>Object\UI\Bar\Health</Filter>
     </ClInclude>
     <ClInclude Include="FireGage.h">
-      <Filter>Object\Player\Bar\FireGage</Filter>
+      <Filter>Object\UI\Bar\FireGage</Filter>
     </ClInclude>
     <ClInclude Include="Bomb.h">
       <Filter>Object\Player\Bomb</Filter>
     </ClInclude>
     <ClInclude Include="Explosion.h">
       <Filter>Object\Particle</Filter>
+    </ClInclude>
+    <ClInclude Include="GamePlay.h">
+      <Filter>App\GamePlay</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenu.h">
+      <Filter>App\MainMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeUI.h">
+      <Filter>Object\UI\TimeUI</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -150,19 +174,28 @@
       <Filter>Object\Ground</Filter>
     </ClCompile>
     <ClCompile Include="Bar.cpp">
-      <Filter>Object\Player\Bar</Filter>
+      <Filter>Object\UI\Bar</Filter>
     </ClCompile>
     <ClCompile Include="Health.cpp">
-      <Filter>Object\Player\Bar\Health</Filter>
+      <Filter>Object\UI\Bar\Health</Filter>
     </ClCompile>
     <ClCompile Include="FireGage.cpp">
-      <Filter>Object\Player\Bar\FireGage</Filter>
+      <Filter>Object\UI\Bar\FireGage</Filter>
     </ClCompile>
     <ClCompile Include="Bomb.cpp">
       <Filter>Object\Player\Bomb</Filter>
     </ClCompile>
     <ClCompile Include="Explosion.cpp">
       <Filter>Object\Particle</Filter>
+    </ClCompile>
+    <ClCompile Include="GamePlay.cpp">
+      <Filter>App\GamePlay</Filter>
+    </ClCompile>
+    <ClCompile Include="MainMenu.cpp">
+      <Filter>App\MainMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeUI.cpp">
+      <Filter>Object\UI\TimeUI</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

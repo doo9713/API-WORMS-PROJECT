@@ -83,7 +83,7 @@ public :
 	void SetScroll(int _X, int _Y)
 	{
 		ScrollX = MathF::Clamp(_X, 0, WINSIZEX);
-		ScrollY = MathF::Clamp(_Y, 0, WINSIZEY);
+		ScrollY = MathF::Clamp(_Y, 0, WINSIZEY - 900);
 	}
 	int AnimationChange(string Name, int Index)
 	{
@@ -125,6 +125,7 @@ public :
 	void AnimationTransparentBlt(string Name, int Clip, int X, int Y, UINT Color = RGB(0, 0, 0));
 	void BitBlt(string Name, int Clip, int X, int Y);
 	void TransparentBlt(string Name, int Clip, int X, int Y, UINT Color = RGB(0, 0, 0));
+	void TransparentUIBlt(string Name, int Clip, int X, int Y, UINT Color);
 	void LoadBackground(string Path, initializer_list<RECT> Clip);
 	void BltBackGround();
 	void DrawGage(int startX, int startY, int endX, int endY, COLORREF color);

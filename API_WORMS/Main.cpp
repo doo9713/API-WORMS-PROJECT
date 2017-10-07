@@ -1,4 +1,5 @@
-#include "App.h"
+#include "GamePlay.h"
+#include "MainMenu.h"
 
 HWND hWnd;
 
@@ -42,7 +43,8 @@ int APIENTRY WinMain(HINSTANCE Inst, HINSTANCE PrevInst, LPSTR CmdLine, int Show
 	UpdateWindow(hWnd);
 
 	MSG msg;
-	CApp Start;
+	CMainMenu Menu;
+	CGamePlay Start;
 	if (Start.Initialize() == false)
 		return 0;
 

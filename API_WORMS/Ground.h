@@ -15,9 +15,9 @@ public :
 	bool active(CObj& My, CObj& Other);
 	void reactive(CObj& My, CObj& Other);
 public :
-	bool Update();
+	void Update();
 	void Render();
 public:
-	bool IsGroundCheck(MathF::VECTOR check);
+	bool IsGroundCheck(MathF::VECTOR check, int data);
 };
 

@@ -7,7 +7,7 @@ struct MathF
 		double x;
 		double y;
 
-		Vector2(double _x = 0, double _y = 0)
+		Vector2(double _x = -100, double _y = -100)
 			: x(_x), y(_y)
 		{}
 
@@ -70,6 +70,18 @@ struct MathF
 		Data.y = Clamp(Data.y, Min.y, Max.y);
 		return Data;
 	}
+	/* 범위 이내에서 순환 */
+	static double ClampCycle(double Data, double Min = 0, double Max = 1)
+	{
+		if (Min > Max)
+			swap(Min, Max);
+
+		if (Min > Data)
+			return Max;
+		if (Max < Data)
+			return Min;
+		return Data;
+	}
 	/* 일정 범위에서 반복 */
 	static double Repeat(double Data, double Min = 0, double Max = 1)
 	{
@@ -114,5 +126,23 @@ struct MathF
 			Line.erase(Before);
 		} while (Line.size() > 1);
 		return *Line.begin();
+	}
+};
+
+struct Func
+{
+	static int Random(int Min, int Max)
+	{
+		if (Min > Max)
+		{
+			int Temp = Min;
+			Min = Max;
+			Max = Temp;
+		}
+		static random_device device;
+		static mt19937_64 engine(device());
+
+		uniform_int_distribution<int> range(Min, Max);
+		return range(engine);
 	}
 };

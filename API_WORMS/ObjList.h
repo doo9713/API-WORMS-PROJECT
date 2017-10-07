@@ -19,6 +19,7 @@ public :
 	void ChangeName(CObj * Obj, const char * Name);
 	void Insert(CObj * Obj);
 	void Remove(CObj * Obj);
+	void Delete(CObj * CObj);
 	void Update();
 	void Render();
 public:
@@ -26,5 +27,7 @@ public:
 	void ActiveObj(CObj * Obj, LAYER Layer);
 	void ActiveObj(CObj * Obj, string Name);
 	void ActiveObj(CObj * Obj);
+public :
+	bool CheckAllGround();
 };
 

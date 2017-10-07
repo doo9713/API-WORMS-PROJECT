@@ -11,13 +11,18 @@ CHealth::~CHealth()
 {
 }
 
-bool CHealth::Update()
+void CHealth::Update()
 {
+	if (super->Layer == Layer_Del)
+	{
+		OBJ.Remove(this);
+		return;
+	}
+
 	Pos.x = super->getPos().x - 25;
 	Pos.y = super->getPos().y + 40;
 
 	rate = (double)94 / 100 * super->GetHealth();
-	return true;
 }
 
 void CHealth::Render()

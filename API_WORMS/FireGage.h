@@ -10,7 +10,7 @@ public:
 public:
 	void Destroy() { this->~CFireGage(); }
 public:
-	bool Update();
+	void Update();
 	void Render();
 };
 
