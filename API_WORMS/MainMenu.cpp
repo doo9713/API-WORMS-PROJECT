@@ -4,6 +4,8 @@
 #include "TimeManager.h"
 #include "KeyManager.h"
 #include "BitmapManager.h"
+#include "TitleUI.h"
+#include "StartButton.h"
 
 CMainMenu::CMainMenu()
 {
@@ -19,6 +21,44 @@ CMainMenu::~CMainMenu()
 
 BOOL CMainMenu::Initialize()
 {
+	FrameTime = 0;
+
+	// TODO : Initialize Game
+	/* BackGround */
+	BITMAP.LoadBackground("BG.bmp",
+	{
+		{ 0, 0, WINSIZEX, WINSIZEY }
+	});
+
+	/* UI */
+	BITMAP.Load("Title1", "title1.bmp",
+	{
+		{ 0, 0, 730, 290 }
+	});
+	BITMAP.Load("Title2", "title2.bmp",
+	{
+		{ 0, 0, 700, 140 }
+	});
+	BITMAP.Load("btStartIdle", "menu1.bmp",
+	{
+		{ 65, 60, 385, 160 }
+	});
+	BITMAP.Load("btStartInto", "menu2.bmp",
+	{
+		{ 65, 60, 385, 160 }
+	});
+	BITMAP.Load("btExitIdle", "menu1.bmp",
+	{
+		{ 100, 200, 355, 295 }
+	});
+	BITMAP.Load("btExitInto", "menu2.bmp",
+	{
+		{ 100, 200, 355, 295 }
+	});
+
+	OBJ.Insert(new CTitleUI("Title1", Tag_UI, Layer_UI, MathF::VECTOR(400, 110)));
+	OBJ.Insert(new CTitleUI("Title2", Tag_UI, Layer_UI, MathF::VECTOR(430, 400)));
+	OBJ.Insert(new CStartButton("Start", Tag_UI, Layer_UI, MathF::VECTOR(640, 550), 320, 100));
 	return true;
 }
 
@@ -40,4 +80,9 @@ void CMainMenu::Render()
 		OBJ.Render();
 		BITMAP.Flip();
 	}
+}
+
+void CMainMenu::Destroy()
+{
+	this->~CMainMenu();
 }

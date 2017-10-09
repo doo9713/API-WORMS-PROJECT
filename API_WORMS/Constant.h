@@ -1,6 +1,7 @@
 #pragma once
 
 extern HWND hWnd;
+extern INT gSceneController;
 
 enum LAYER
 {

@@ -2,6 +2,7 @@
 #include "MainMenu.h"
 
 HWND hWnd;
+INT gSceneController;
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
@@ -44,9 +45,10 @@ int APIENTRY WinMain(HINSTANCE Inst, HINSTANCE PrevInst, LPSTR CmdLine, int Show
 
 	MSG msg;
 	CMainMenu Menu;
-	CGamePlay Start;
-	if (Start.Initialize() == false)
+	if (!Menu.Initialize())
 		return 0;
+	CGamePlay Start;
+	gSceneController = MAINSCENE;
 
 	while (1)
 	{
@@ -59,9 +61,26 @@ int APIENTRY WinMain(HINSTANCE Inst, HINSTANCE PrevInst, LPSTR CmdLine, int Show
 		}
 
 		// TODO : Game Logic
-		if (Start.Update() == false)
+		switch (gSceneController)
+		{
+		case MAINSCENE :
+			if (Menu.Update() == false)
+				break;
+			Menu.Render();
 			break;
-		Start.Render();
+		case GAMELOAD :
+			Menu.Destroy();
+			if (!Start.Initialize())
+				return 0;
+			gSceneController = GAMESCENE;
+		case GAMESCENE :
+			if (Start.Update() == false)
+				break;
+			Start.Render();
+			break;
+		default:
+			break;
+		}
 	}
 
 	return (int)msg.wParam;

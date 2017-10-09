@@ -9,5 +9,6 @@ public:
 	BOOL Initialize();
 	BOOL Update();
 	void Render();
+	void Destroy();
 };
 

@@ -8,6 +8,12 @@
 #define BITMAP SINGLE(CBitmapManager)
 #define TILE SINGLE(CTile)
 
+/* Scene */
+#define MAINSCENE 0
+#define GAMELOAD 1
+#define GAMESCENE 2
+#define EXITSCENE 3
+
 /* ETC */
 #define FRAMETIME 0.016667
 #define WINSIZEX 1600

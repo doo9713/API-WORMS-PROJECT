@@ -73,6 +73,15 @@
     <Filter Include="Object\UI\Bar\FireGage">
       <UniqueIdentifier>{ad81e05a-a5f0-4ac5-a77f-f7f959d57ed5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Object\UI\Button\StartButton">
+      <UniqueIdentifier>{bc65d712-0fe5-4626-b93d-11e20e335db4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\UI\Button\ExitButton">
+      <UniqueIdentifier>{ed45378f-e721-4ae2-9aec-4aeab0e8d1f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\UI\TitleUI">
+      <UniqueIdentifier>{f35ced38-8df0-4180-8d88-4667e6dcd253}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Constant.h">
@@ -141,6 +150,15 @@
     <ClInclude Include="TimeUI.h">
       <Filter>Object\UI\TimeUI</Filter>
     </ClInclude>
+    <ClInclude Include="MyButton.h">
+      <Filter>Object\UI\Button</Filter>
+    </ClInclude>
+    <ClInclude Include="TitleUI.h">
+      <Filter>Object\UI\TitleUI</Filter>
+    </ClInclude>
+    <ClInclude Include="StartButton.h">
+      <Filter>Object\UI\Button\StartButton</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -196,6 +214,15 @@
     </ClCompile>
     <ClCompile Include="TimeUI.cpp">
       <Filter>Object\UI\TimeUI</Filter>
+    </ClCompile>
+    <ClCompile Include="MyButton.cpp">
+      <Filter>Object\UI\Button</Filter>
+    </ClCompile>
+    <ClCompile Include="TitleUI.cpp">
+      <Filter>Object\UI\TitleUI</Filter>
+    </ClCompile>
+    <ClCompile Include="StartButton.cpp">
+      <Filter>Object\UI\Button\StartButton</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

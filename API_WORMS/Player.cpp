@@ -139,5 +139,8 @@ void CPlayer::Render()
 			BITMAP.DrawAngle(Pos.x + 36, Pos.y + 18, angle);
 		else
 			BITMAP.DrawAngleReverse(Pos.x, Pos.y + 18, angle);
+
+		if (playerList[playerTurn] == name)
+			BITMAP.TransparentBlt("Arrow", 0, Pos.x + 12, Pos.y - 15, RGB(255, 255, 255));
 	}
 }

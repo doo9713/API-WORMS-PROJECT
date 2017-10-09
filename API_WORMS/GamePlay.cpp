@@ -39,12 +39,16 @@ BOOL CGamePlay::Initialize()
 	{
 		{ 0, 0, 96, 16 }
 	});
+	BITMAP.Load("Arrow", "arrow.bmp",
+	{
+		{ 0, 0, 15, 20 }
+	});
 	for (int i = 0; i < 10; ++i)
 	{
 		string temp = to_string(i);
-		BITMAP.Load(temp, "NumberFont.bmp",
+		BITMAP.Load(temp, "number.bmp",
 		{
-			{ 15 * i, 0, 15 * (i + 1), 15 }
+			{ 50 * i, 0, 50 * (i + 1), 52 }
 		});
 	}
 
@@ -128,7 +132,7 @@ BOOL CGamePlay::Initialize()
 
 	OBJ.Insert(new CPlayer("Player1", Tag_Player, Layer_Object, MathF::VECTOR(100, 100)));
 	OBJ.Insert(new CPlayer("Player2", Tag_Player, Layer_Object, MathF::VECTOR(1000, 100)));
-	OBJ.Insert(new CTimeUI("TimeUI", Tag_UI, Layer_UI, MathF::VECTOR(0, 0)));
+	OBJ.Insert(new CTimeUI("TimeUI", Tag_UI, Layer_UI, MathF::VECTOR(760, 10)));
 
 	OBJ.Insert(new CGround("TopLeft", Tag_Ground, Layer_Object, MathF::VECTOR(10, 600)));
 	for (int i = 1; i < 23; ++i)

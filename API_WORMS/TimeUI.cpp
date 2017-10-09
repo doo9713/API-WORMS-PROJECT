@@ -46,7 +46,7 @@ void CTimeUI::Render()
 {
 	if (isStart)
 	{
-		BITMAP.TransparentUIBlt(first, 0, 0, 0, RGB(255, 255, 255));
-		BITMAP.TransparentUIBlt(second, 0, 15, 0, RGB(255, 255, 255));
+		BITMAP.TransparentUIBlt(first, 0, Pos.x, Pos.y, RGB(255, 255, 255));
+		BITMAP.TransparentUIBlt(second, 0, Pos.x + 40, Pos.y, RGB(255, 255, 255));
 	}
 }
