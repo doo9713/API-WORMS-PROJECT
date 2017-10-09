@@ -3,7 +3,9 @@
 #include "BitmapManager.h"
 #include "Player.h"
 
+bool CTimeUI::isOver = false;
 double CTimeUI::time = 30.0;
+
 CTimeUI::CTimeUI(const char * _name, TAG _tag, LAYER _layer, MathF::VECTOR _pos)
 	: CObj(_name, _tag, _layer, _pos), isStart(false)
 {
@@ -25,6 +27,12 @@ void CTimeUI::reactive(CObj& My, CObj& Other)
 
 void CTimeUI::Update()
 {
+	if (isOver)
+	{
+		OBJ.Remove(this);
+		return;
+	}
+
 	if (!isStart && OBJ.CheckAllGround())
 		isStart = true;
 

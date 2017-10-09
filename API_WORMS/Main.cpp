@@ -78,6 +78,8 @@ int APIENTRY WinMain(HINSTANCE Inst, HINSTANCE PrevInst, LPSTR CmdLine, int Show
 				break;
 			Start.Render();
 			break;
+		case EXITGAME :
+			return (int)msg.wParam;
 		default:
 			break;
 		}

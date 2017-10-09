@@ -6,6 +6,7 @@
 #include "BitmapManager.h"
 #include "TitleUI.h"
 #include "StartButton.h"
+#include "ExitButton.h"
 
 CMainMenu::CMainMenu()
 {
@@ -59,6 +60,7 @@ BOOL CMainMenu::Initialize()
 	OBJ.Insert(new CTitleUI("Title1", Tag_UI, Layer_UI, MathF::VECTOR(400, 110)));
 	OBJ.Insert(new CTitleUI("Title2", Tag_UI, Layer_UI, MathF::VECTOR(430, 400)));
 	OBJ.Insert(new CStartButton("Start", Tag_UI, Layer_UI, MathF::VECTOR(640, 550), 320, 100));
+	OBJ.Insert(new CExitButton("Exit", Tag_UI, Layer_UI, MathF::VECTOR(675, 650), 255, 95));
 	return true;
 }
 

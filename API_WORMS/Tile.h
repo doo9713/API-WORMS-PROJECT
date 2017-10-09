@@ -20,6 +20,7 @@ public :
 	CTile();
 	~CTile();
 public :
+	bool TileInit();
 	void TileLoad(const char * Path);
 	void MakeMap();
 };

@@ -82,7 +82,7 @@ public :
 	}
 	void SetScroll(int _X, int _Y)
 	{
-		ScrollX = MathF::Clamp(_X, 0, WINSIZEX - WINSIZEX + 400);
+		ScrollX = MathF::Clamp(_X, 0, WINSIZEX - WINSIZEX + 320);
 		ScrollY = MathF::Clamp(_Y, 0, WINSIZEY - WINSIZEY);
 	}
 	int AnimationChange(string Name, int Index)

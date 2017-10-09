@@ -34,6 +34,14 @@ BOOL CGamePlay::Initialize()
 		{ 0, 0, WINSIZEX, WINSIZEY }
 	});
 
+	/* Map */
+	BITMAP.Load("Map", "MapTile/Map.bmp",
+	{
+		{ 0, 0, 30, 15 }
+	});
+	if (TILE.TileInit())
+		TILE.TileLoad("Map");
+
 	/* UI */
 	BITMAP.Load("Bar", "bar.bmp",
 	{
@@ -51,6 +59,26 @@ BOOL CGamePlay::Initialize()
 			{ 50 * i, 0, 50 * (i + 1), 52 }
 		});
 	}
+	BITMAP.Load("GameOver", "gameover.bmp",
+	{
+		{ 0, 0, 1200, 180 }
+	});
+	BITMAP.Load("Player1Win", "wintitle.bmp",
+	{
+		{ 0, 0, 830, 130 }
+	});
+	BITMAP.Load("Player2Win", "wintitle.bmp",
+	{
+		{ 0, 131, 830, 260 }
+	});
+	BITMAP.Load("btExitIdle", "menu1.bmp",
+	{
+		{ 100, 200, 355, 295 }
+	});
+	BITMAP.Load("btExitInto", "menu2.bmp",
+	{
+		{ 100, 200, 355, 295 }
+	});
 
 	/* Player */
 	BITMAP.Load("PlayerDrop", "Sheet.bmp",
@@ -116,28 +144,9 @@ BOOL CGamePlay::Initialize()
 	});
 	BITMAP.LoadAnimation("Explosion", "Explosion", 0, 13);
 
-	/* Map Test */
-	BITMAP.Load("TopLeft", "MapTile/1.bmp",
-	{
-		{ 0, 0, 64, 64 }
-	});
-	BITMAP.Load("TopCenter", "MapTile/2.bmp",
-	{
-		{ 0, 0, 64, 64 }
-	});
-	BITMAP.Load("TopRight", "MapTile/3.bmp",
-	{
-		{ 0, 0, 64, 64 }
-	});
-
 	OBJ.Insert(new CPlayer("Player1", Tag_Player, Layer_Object, MathF::VECTOR(100, 100)));
-	OBJ.Insert(new CPlayer("Player2", Tag_Player, Layer_Object, MathF::VECTOR(1000, 100)));
+	OBJ.Insert(new CPlayer("Player2", Tag_Player, Layer_Object, MathF::VECTOR(1500, 100)));
 	OBJ.Insert(new CTimeUI("TimeUI", Tag_UI, Layer_UI, MathF::VECTOR(760, 10)));
-
-	OBJ.Insert(new CGround("TopLeft", Tag_Ground, Layer_Object, MathF::VECTOR(10, 600)));
-	for (int i = 1; i < 23; ++i)
-		OBJ.Insert(new CGround("TopCenter", Tag_Ground, Layer_Object, MathF::VECTOR(10 + (64 * i), 600)));
-	OBJ.Insert(new CGround("TopRight", Tag_Ground, Layer_Object, MathF::VECTOR(64 * 23, 600)));
 
 	return true;
 }
@@ -157,6 +166,7 @@ void CGamePlay::Render()
 	{
 		FrameTime -= FRAMETIME;
 		BITMAP.Clear();
+		TILE.MakeMap();
 		OBJ.Render();
 		BITMAP.Flip();
 	}

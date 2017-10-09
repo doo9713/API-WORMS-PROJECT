@@ -4,7 +4,7 @@
 class CTimeUI :	public CObj
 {
 private :
-
+	static bool isOver;
 	static double time;
 private :
 	bool isStart;
@@ -15,6 +15,7 @@ public:
 	~CTimeUI();
 public:
 	static void SetTimeMax() { time = 30; }
+	static void SetGameOver() { isOver = true; }
 public:
 	void Destroy() { this->~CTimeUI(); }
 public:

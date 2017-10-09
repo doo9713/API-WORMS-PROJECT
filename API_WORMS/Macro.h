@@ -12,7 +12,7 @@
 #define MAINSCENE 0
 #define GAMELOAD 1
 #define GAMESCENE 2
-#define EXITSCENE 3
+#define EXITGAME 3
 
 /* ETC */
 #define FRAMETIME 0.016667

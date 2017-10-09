@@ -3,6 +3,9 @@
 #include "Health.h"
 #include "FireGage.h"
 #include "Bomb.h"
+#include "TimeUI.h"
+#include "TitleUI.h"
+#include "ExitButton.h"
 
 bool CPlayer::isOver = false;
 int CPlayer::playerTurn = 0;
@@ -49,7 +52,14 @@ void CPlayer::Update()
 	// TODO : Object Update
 	if (health <= 0)
 	{
+		CTimeUI::SetGameOver();
 		OBJ.Remove(this);
+		OBJ.Insert(new CTitleUI("GameOver", Tag_UI, Layer_UI, MathF::VECTOR(100, 150)));
+		if(name == "Player1")
+			OBJ.Insert(new CTitleUI("Player2Win", Tag_UI, Layer_UI, MathF::VECTOR(150, 300)));
+		else
+			OBJ.Insert(new CTitleUI("Player1Win", Tag_UI, Layer_UI, MathF::VECTOR(150, 300)));
+		OBJ.Insert(new CExitButton("Exit", Tag_UI, Layer_UI, MathF::VECTOR(1300, 750), 255, 95));
 		return;
 	}
 
