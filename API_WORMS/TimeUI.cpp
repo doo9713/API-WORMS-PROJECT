@@ -25,12 +25,12 @@ void CTimeUI::reactive(CObj& My, CObj& Other)
 
 }
 
-void CTimeUI::Update()
+bool CTimeUI::Update()
 {
 	if (isOver)
 	{
 		OBJ.Remove(this);
-		return;
+		return false;
 	}
 
 	if (!isStart && OBJ.CheckAllGround())
@@ -48,6 +48,7 @@ void CTimeUI::Update()
 		first = to_string((int)(time / 10));
 		second = to_string((int)time % 10);
 	}
+	return true;
 }
 
 void CTimeUI::Render()

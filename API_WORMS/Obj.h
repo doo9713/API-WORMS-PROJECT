@@ -37,7 +37,7 @@ public :
 	virtual bool active(CObj& My, CObj& Other) = 0;
 	virtual void reactive(CObj& My, CObj& Other) = 0;
 public :
-	virtual void Update() = 0;
+	virtual bool Update() = 0;
 	virtual void Render() = 0;
 };
 

@@ -11,6 +11,7 @@ enum LAYER
 	Layer_Player,
 	Layer_Particle,
 	Layer_UI,
+	Layer_Dead,
 	Layer_Del,
 	Layer_End
 };

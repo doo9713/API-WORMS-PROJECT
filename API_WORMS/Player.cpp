@@ -48,12 +48,12 @@ void CPlayer::reactive(CObj& My, CObj& Other)
 	isGround = true;
 }
 
-void CPlayer::Update()
+bool CPlayer::Update()
 {
 	// TODO : Object Update
 	if (health <= 0)
 	{
-		OBJ.Remove(this);
+		OBJ.Dead(this);
 		for (int i = 0; i < PLAYERMAX; ++i)
 		{
 			if (playerList[i] == name)
@@ -74,7 +74,7 @@ void CPlayer::Update()
 			}
 			OBJ.Insert(new CExitButton("Exit", Tag_UI, Layer_UI, MathF::VECTOR(1300, 750), 255, 95));
 		}
-		return;
+		return false;
 	}
 
 	if (playerList[playerTurn] == "Dead")
@@ -87,7 +87,7 @@ void CPlayer::Update()
 	{
 		if (State != "Drop")
 			State = "Idle";
-		Pos.y += 250 * TIME.Delta();
+		Pos.y += 150 * TIME.Delta();
 	}
 	else if (playerList[playerTurn] == name && !isOver)
 	{
@@ -155,6 +155,7 @@ void CPlayer::Update()
 		ClipTime -= 0.14;
 		index = BITMAP.AnimationUpdate("Player" + Dir + State, index);
 	}
+	return true;
 }
 
 void CPlayer::Render()

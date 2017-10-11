@@ -16,7 +16,7 @@ public:
 	virtual bool active(CObj& My, CObj& Other) = 0;
 	virtual void reactive(CObj& My, CObj& Other) = 0;
 public:
-	void Update();
+	bool Update();
 	void Render();
 public:
 	bool IntoBt();

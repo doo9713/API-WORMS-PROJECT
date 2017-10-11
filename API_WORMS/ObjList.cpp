@@ -69,63 +69,56 @@ void CObjList::Remove(CObj * Obj)
 	if (Obj == nullptr)
 		return;
 
-	for (auto iter : TagList[Obj->Tag]) 
-	{
-		if (iter == Obj)
-		{
-			TagList[Obj->Tag].erase(iter);
-			break;
-		}
-	}
-	for (auto iter : LayerList[Obj->Layer])
-	{
-		if (iter == Obj)
-		{
-			iter->Layer = Layer_Del;
-			break;
-		}
-	}
+	TagList[Obj->Tag].erase(Obj);
+
+	set<CObj*>::iterator it = LayerList[Obj->Layer].find(Obj);
+	(*it)->Layer = Layer_Del;
 
 	auto temp = NameList.find(Obj->Name);
-	for (auto iter : temp->second)
-	{
-		if (iter == Obj)
-		{
-			temp->second.erase(iter);
-			break;
-		}
-	}
+	temp->second.erase(Obj);
 }
 
-void CObjList::Delete(CObj * Obj)
+void CObjList::Dead(CObj * Obj)
 {
 	if (Obj == nullptr)
 		return;
 
-	for (auto iter : Active)
+	TagList[Obj->Tag].erase(Obj);
+
+	set<CObj*>::iterator it = LayerList[Obj->Layer].find(Obj);
+	(*it)->Layer = Layer_Dead;
+
+	auto temp = NameList.find(Obj->Name);
+	temp->second.erase(Obj);
+}
+
+void CObjList::Delete()
+{
+	while (LayerList[Layer_Del].size() > 0)
 	{
-		if (iter == Obj)
-		{
-			Active.erase(iter);
-			break;
-		}
+		CObj * delObj = (*LayerList[Layer_Del].begin());
+		LayerList[Layer_Del].begin() = LayerList[Layer_Del].erase(LayerList[Layer_Del].begin());
+		delObj->Destroy();
 	}
 }
 
 void CObjList::Update()
 {
-	for (auto obj : Active)
-		obj->Update();
+	for (set<CObj*>::iterator obj = Active.begin(); obj != Active.end();)
+	{
+		if (!(*obj)->Update())
+			obj = Active.erase(obj);
+		else
+			++obj;
+	}
 
-	for (auto obj : LayerList[Layer_Del])
-		OBJ.Delete(obj);
-
-	LayerList[Layer_Del].clear();
+	if (LayerList[Layer_Del].size() > 0)
+		OBJ.Delete();
 }
 
 void CObjList::Render()
 {
-	for (int i = 0; i < Layer_Del; ++i)
+	for (int i = 0; i < Layer_Dead; ++i)
 		for (auto obj : LayerList[i])
 			obj->Render();
 }

@@ -36,19 +36,19 @@ void CBomb::reactive(CObj& My, CObj& Other)
 	isOver = true;
 }
 
-void CBomb::Update()
+bool CBomb::Update()
 {
 	if (isOver)
 	{
 		OBJ.Remove(this);
-		return;
+		return false;
 	}
 
 	if (Pos.y >= WINSIZEY)
 	{
 		CPlayer::TurnChange();
 		OBJ.Remove(this);
-		return;
+		return false;
 	}
 
 	BITMAP.SetScroll(Pos.x - 800, Pos.y - 650);
@@ -58,6 +58,7 @@ void CBomb::Update()
 
 	speed += TIME.Delta() / 2.5;
 	Pos = MathF::Slerp(speed, { startPos, midPos, dstPos });
+	return true;
 }
 
 void CBomb::Render()

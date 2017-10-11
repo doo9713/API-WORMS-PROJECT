@@ -21,13 +21,13 @@ void CExplosion::reactive(CObj& My, CObj& Other)
 
 }
 
-void CExplosion::Update()
+bool CExplosion::Update()
 {
 	if (index == 13)
 	{
 		CPlayer::TurnChange();
 		OBJ.Remove(this);
-		return;
+		return false;
 	}
 
 	BITMAP.SetScroll(Pos.x - 800, Pos.y - 650);
@@ -38,6 +38,7 @@ void CExplosion::Update()
 		ClipTime -= 0.04;
 		index = BITMAP.AnimationUpdate("Explosion", index);
 	}
+	return true;
 }
 
 void CExplosion::Render()

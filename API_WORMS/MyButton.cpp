@@ -9,13 +9,14 @@ CMyButton::~CMyButton()
 {
 }
 
-void CMyButton::Update()
+bool CMyButton::Update()
 {
 	if (IntoBt() && KEY.Push(VK_LBUTTON))
 	{
 		gSndController->Play("ButtonPress");
 		ClickBt();
 	}
+	return true;
 }
 
 void CMyButton::Render()

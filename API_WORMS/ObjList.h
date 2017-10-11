@@ -19,7 +19,8 @@ public :
 	void ChangeName(CObj * Obj, const char * Name);
 	void Insert(CObj * Obj);
 	void Remove(CObj * Obj);
-	void Delete(CObj * CObj);
+	void Dead(CObj * Obj);
+	void Delete();
 	void Update();
 	void Render();
 public:

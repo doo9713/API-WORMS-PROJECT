@@ -20,9 +20,9 @@ void CTitleUI::reactive(CObj& My, CObj& Other)
 
 }
 
-void CTitleUI::Update()
+bool CTitleUI::Update()
 {
-
+	return true;
 }
 
 void CTitleUI::Render()

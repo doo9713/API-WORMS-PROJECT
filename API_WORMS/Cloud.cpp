@@ -22,10 +22,10 @@ void CCloud::reactive(CObj& My, CObj& Other)
 
 }
 
-void CCloud::Update()
+bool CCloud::Update()
 {
-	// Pos.x += TIME.Delta() * 100;
 	Pos.x = MathF::ClampCycle(Pos.x + TIME.Delta() * dir * 100, -200, 2000);
+	return true;
 }
 
 void CCloud::Render()
