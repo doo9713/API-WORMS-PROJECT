@@ -9,6 +9,7 @@
 #include "Ground.h"
 #include "Bar.h"
 #include "TimeUI.h"
+#include "Cloud.h"
 
 CGamePlay::CGamePlay()
 {
@@ -28,6 +29,13 @@ BOOL CGamePlay::Initialize()
 	FrameTime = 0;
 
 	// TODO : Initialize Game
+	/* Sound Initialize */
+	gSndController->LoadSound("PlaySong", "./Resource/Sound/Play.mp3", true);
+	gSndController->LoadSound("Fire", "./Resource/Sound/Cannon.mp3");
+	gSndController->LoadSound("Explo", "./Resource/Sound/Explosion.mp3");
+	gSndController->Stop("MainSong");
+	gSndController->Play("PlaySong");
+
 	/* BackGround */
 	BITMAP.LoadBackground("BG.bmp",
 	{
@@ -65,11 +73,19 @@ BOOL CGamePlay::Initialize()
 	});
 	BITMAP.Load("Player1Win", "wintitle.bmp",
 	{
-		{ 0, 0, 830, 130 }
+		{ 0, 0, 679, 130 }
 	});
 	BITMAP.Load("Player2Win", "wintitle.bmp",
 	{
-		{ 0, 131, 830, 260 }
+		{ 0, 131, 679, 260 }
+	});
+	BITMAP.Load("Player3Win", "wintitle.bmp",
+	{
+		{ 0, 261, 679, 390 }
+	});
+	BITMAP.Load("Player4Win", "wintitle.bmp",
+	{
+		{ 0, 391, 679, 520 }
 	});
 	BITMAP.Load("btExitIdle", "menu1.bmp",
 	{
@@ -124,6 +140,12 @@ BOOL CGamePlay::Initialize()
 		{ 0, 0, 16, 16 }
 	});
 
+	/* Cloud */
+	BITMAP.Load("Cloud", "Cloud.bmp",
+	{
+		{ 0, 0, 200, 82 }
+	});
+
 	/* Explosion */
 	BITMAP.Load("Explosion", "Explo.bmp",
 	{
@@ -144,15 +166,26 @@ BOOL CGamePlay::Initialize()
 	});
 	BITMAP.LoadAnimation("Explosion", "Explosion", 0, 13);
 
-	OBJ.Insert(new CPlayer("Player1", Tag_Player, Layer_Object, MathF::VECTOR(100, 100)));
-	OBJ.Insert(new CPlayer("Player2", Tag_Player, Layer_Object, MathF::VECTOR(1500, 100)));
+	OBJ.Insert(new CPlayer("Player1", Tag_Player, Layer_Player, MathF::VECTOR(100, 100)));
+	OBJ.Insert(new CPlayer("Player2", Tag_Player, Layer_Player, MathF::VECTOR(1500, 130)));
+	OBJ.Insert(new CPlayer("Player3", Tag_Player, Layer_Player, MathF::VECTOR(300, 70)));
+	OBJ.Insert(new CPlayer("Player4", Tag_Player, Layer_Player, MathF::VECTOR(900, 160)));
+
 	OBJ.Insert(new CTimeUI("TimeUI", Tag_UI, Layer_UI, MathF::VECTOR(760, 10)));
+
+	OBJ.Insert(new CCloud("Cloud", Tag_Particle, Layer_Particle, MathF::VECTOR(10, 50), 1));
+	OBJ.Insert(new CCloud("Cloud", Tag_Particle, Layer_Particle, MathF::VECTOR(1400, 100), -1));
+	OBJ.Insert(new CCloud("Cloud", Tag_Particle, Layer_Particle, MathF::VECTOR(450, 170), 1));
+	OBJ.Insert(new CCloud("Cloud", Tag_Particle, Layer_Particle, MathF::VECTOR(1800, 70), -1));
+	OBJ.Insert(new CCloud("Cloud", Tag_Particle, Layer_Particle, MathF::VECTOR(900, 120), 1));
+	OBJ.Insert(new CCloud("Cloud", Tag_Particle, Layer_Particle, MathF::VECTOR(400, 90), -1));
 
 	return true;
 }
 
 BOOL CGamePlay::Update()
 {
+	gSndController->Update();
 	TIME.Set();
 	KEY.Set();
 	OBJ.Update();

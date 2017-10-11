@@ -20,6 +20,7 @@
 #define WINSIZEY 900
 
 /* Player */
+#define PLAYERMAX 4
 #define PLAYERHEIGHT 39
 #define ANGLESIZE 40
 

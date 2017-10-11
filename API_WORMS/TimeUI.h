@@ -1,12 +1,12 @@
 #pragma once
 #include "Obj.h"
 
-class CTimeUI :	public CObj
+class CTimeUI : public CObj
 {
-private :
+private:
 	static bool isOver;
 	static double time;
-private :
+private:
 	bool isStart;
 	string first;
 	string second;

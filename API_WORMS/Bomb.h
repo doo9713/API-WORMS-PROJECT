@@ -2,7 +2,7 @@
 #include "Obj.h"
 class CBomb : public CObj
 {
-private :
+private:
 	bool isOver;
 	double speed;
 	MathF::VECTOR startPos;
@@ -14,12 +14,12 @@ private :
 public:
 	CBomb(const char * _name, TAG _tag, LAYER _layer, MathF::VECTOR _pos, double _power, double _angle, int _dir);
 	~CBomb();
-public :
+public:
 	void Destroy() { this->~CBomb(); }
 public:
 	bool active(CObj& My, CObj& Other);
 	void reactive(CObj& My, CObj& Other);
-public :
+public:
 	void Update();
 	void Render();
 };

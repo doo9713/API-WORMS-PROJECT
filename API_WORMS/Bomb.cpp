@@ -29,9 +29,9 @@ bool CBomb::active(CObj& My, CObj& Other)
 
 void CBomb::reactive(CObj& My, CObj& Other)
 {
-	if(Other.Tag == Tag_Player)
+	if (Other.Tag == Tag_Player)
 		((CPlayer&)Other).GetDamage(Func::Random(10, 30));
-	if(!isOver)
+	if (!isOver)
 		OBJ.Insert(new CExplosion("Explo", Tag_Particle, Layer_Particle, Pos));
 	isOver = true;
 }

@@ -1,0 +1,6 @@
+﻿  ObjList.cpp
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(85): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\bitmapmanager.h(86): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\player.h(27): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  API_WORMS.vcxproj -> D:\문서\GitHub\API-WORMS-PROJECT\API_WORMS\x64\Debug\API_WORMS.exe
+  API_WORMS.vcxproj -> D:\문서\GitHub\API-WORMS-PROJECT\API_WORMS\x64\Debug\API_WORMS.pdb (Full PDB)

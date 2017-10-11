@@ -2,6 +2,7 @@
 #include "MainMenu.h"
 
 HWND hWnd;
+GameSound gSndController;
 INT gSceneController;
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)

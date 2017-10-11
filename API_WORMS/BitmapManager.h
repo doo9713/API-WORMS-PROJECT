@@ -4,14 +4,14 @@
 
 class CBitmapManager : public CManager<CBitmapManager>
 {
-private :
+private:
 	class CBitmapLoader
 	{
-	private :
+	private:
 		HBITMAP Bitmap;
 		HBITMAP Before;
 		vector<RECT> ClipSize;
-	public :
+	public:
 		HDC DC;
 		RECT GetClip(int index)
 		{
@@ -62,13 +62,13 @@ private :
 	HDC Screen;
 	INT ScrollX = 0;
 	INT ScrollY = 0;
-public :
+public:
 	CBitmapManager();
 	~CBitmapManager();
-public :
+public:
 	POINT GetScroll() const
 	{
-		return { ScrollX, ScrollY };
+		return{ ScrollX, ScrollY };
 	}
 	HDC GetDC(string Name)
 	{
@@ -119,13 +119,13 @@ public :
 			return Clip + 1;
 		return iter->second.Begin;
 	}
-public :
+public:
 	void Load(string Name, string Path, initializer_list<RECT> Clip);
 	void AnimationBitBlt(string Name, int Clip, int X, int Y);
 	void AnimationTransparentBlt(string Name, int Clip, int X, int Y, UINT Color = RGB(0, 0, 0));
 	void BitBlt(string Name, int Clip, int X, int Y);
 	void TransparentBlt(string Name, int Clip, int X, int Y, UINT Color = RGB(0, 0, 0));
-	void TransparentUIBlt(string Name, int Clip, int X, int Y, UINT Color);
+	void TransparentUIBlt(string Name, int Clip, int X, int Y, UINT Color = RGB(255, 255, 255));
 	void LoadBackground(string Path, initializer_list<RECT> Clip);
 	void BltBackGround();
 	void DrawGage(int startX, int startY, int endX, int endY, COLORREF color);

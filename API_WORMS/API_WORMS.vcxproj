@@ -42,14 +42,14 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -145,6 +145,7 @@
     <ClInclude Include="App.h" />
     <ClInclude Include="Bar.h" />
     <ClInclude Include="BitmapManager.h" />
+    <ClInclude Include="Cloud.h" />
     <ClInclude Include="Constant.h" />
     <ClInclude Include="ExitButton.h" />
     <ClInclude Include="Explosion.h" />
@@ -173,6 +174,7 @@
     <ClCompile Include="App.cpp" />
     <ClCompile Include="Bar.cpp" />
     <ClCompile Include="BitmapManager.cpp" />
+    <ClCompile Include="Cloud.cpp" />
     <ClCompile Include="ExitButton.cpp" />
     <ClCompile Include="Explosion.cpp" />
     <ClCompile Include="FireGage.cpp" />

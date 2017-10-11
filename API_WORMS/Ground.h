@@ -4,17 +4,17 @@
 
 class CGround : public CObj
 {
-private :
+private:
 	MathF::VECTOR CollisionPos[TILESIZEXY];
-public :
+public:
 	CGround(const char * _name, TAG _tag, LAYER _layer, MathF::VECTOR _pos);
 	~CGround();
 public:
 	void Destroy() { this->~CGround(); }
-public :
+public:
 	bool active(CObj& My, CObj& Other);
 	void reactive(CObj& My, CObj& Other);
-public :
+public:
 	void Update();
 	void Render();
 public:

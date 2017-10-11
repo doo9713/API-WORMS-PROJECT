@@ -9,7 +9,8 @@
 
 bool CPlayer::isOver = false;
 int CPlayer::playerTurn = 0;
-string CPlayer::playerList[2] = { "Player1", "Player2" };
+int CPlayer::playerCnt = 4;
+string CPlayer::playerList[4] = { "Player1", "Player2", "Player3", "Player4" };
 
 CPlayer::CPlayer(const char * _name, TAG _tag, LAYER _layer, MathF::VECTOR _pos)
 	: CObj(_name, _tag, _layer, _pos), index(0), health(100), angle(45), powergage(0), isGround(false)
@@ -33,12 +34,12 @@ bool CPlayer::active(CObj& My, CObj& Other)
 		checkPos.x += 26;
 		checkPos.y += 31;
 	}
-	else 
+	else
 	{
 		checkPos.x += 17;
 		checkPos.y += 19;
 	}
-	return ((CGround&)Other).IsGroundCheck(checkPos, PLAYERHEIGHT / 2 - 4);
+	return ((CGround&)Other).IsGroundCheck(checkPos, PLAYERHEIGHT / 2 - 3);
 }
 
 void CPlayer::reactive(CObj& My, CObj& Other)
@@ -52,25 +53,41 @@ void CPlayer::Update()
 	// TODO : Object Update
 	if (health <= 0)
 	{
-		CTimeUI::SetGameOver();
 		OBJ.Remove(this);
-		OBJ.Insert(new CTitleUI("GameOver", Tag_UI, Layer_UI, MathF::VECTOR(100, 150)));
-		if(name == "Player1")
-			OBJ.Insert(new CTitleUI("Player2Win", Tag_UI, Layer_UI, MathF::VECTOR(150, 300)));
-		else
-			OBJ.Insert(new CTitleUI("Player1Win", Tag_UI, Layer_UI, MathF::VECTOR(150, 300)));
-		OBJ.Insert(new CExitButton("Exit", Tag_UI, Layer_UI, MathF::VECTOR(1300, 750), 255, 95));
+		for (int i = 0; i < PLAYERMAX; ++i)
+		{
+			if (playerList[i] == name)
+				playerList[i] = "Dead";
+		}
+		--playerCnt;
+		if (playerCnt == 1)
+		{
+			CTimeUI::SetGameOver();
+			OBJ.Insert(new CTitleUI("GameOver", Tag_UI, Layer_UI, MathF::VECTOR(100, 150)));
+			for (int i = 0; i < PLAYERMAX; ++i)
+			{
+				if (playerList[i] != "Dead")
+				{
+					string titleName = playerList[i] + "Win";
+					OBJ.Insert(new CTitleUI(titleName.data(), Tag_UI, Layer_UI, MathF::VECTOR(150, 300)));
+				}
+			}
+			OBJ.Insert(new CExitButton("Exit", Tag_UI, Layer_UI, MathF::VECTOR(1300, 750), 255, 95));
+		}
 		return;
 	}
+
+	if (playerList[playerTurn] == "Dead")
+		TurnChange();
 
 	isGround = false;
 	OBJ.ActiveObj(this, Tag_Ground);
 
-	if (!isGround) 
+	if (!isGround)
 	{
 		if (State != "Drop")
 			State = "Idle";
-		Pos.y += 150 * TIME.Delta();
+		Pos.y += 250 * TIME.Delta();
 	}
 	else if (playerList[playerTurn] == name && !isOver)
 	{
@@ -114,6 +131,7 @@ void CPlayer::Update()
 				OBJ.Insert(new CBomb("Bomb", Tag_Bullet, Layer_Object, MathF::VECTOR(Pos.x - 12, Pos.y + 5), powergage, angle, -1));
 			powergage = 0;
 			isOver = true;
+			gSndController->Play("Fire");
 		}
 	}
 

@@ -1,12 +1,14 @@
 #pragma once
 
 extern HWND hWnd;
+extern GameSound gSndController;
 extern INT gSceneController;
 
 enum LAYER
 {
 	Layer_Default,
 	Layer_Object,
+	Layer_Player,
 	Layer_Particle,
 	Layer_UI,
 	Layer_Del,

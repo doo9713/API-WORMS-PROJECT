@@ -139,7 +139,7 @@ void CBitmapManager::DrawAngleReverse(int posx, int posy, int angle)
 		SetPixel(BackBuffer.DC, posx - ScrollX, i, RGB(255, 100, 0));
 
 	double op = (ANGLESIZE * ANGLESIZE) / 90 * angle;
-	MathF::VECTOR dst = { posx - ScrollX - sqrt(ANGLESIZE * ANGLESIZE - op), posy -ScrollY - sqrt(op) };
+	MathF::VECTOR dst = { posx - ScrollX - sqrt(ANGLESIZE * ANGLESIZE - op), posy - ScrollY - sqrt(op) };
 	for (int i = 0; i < ANGLESIZE; ++i)
 	{
 		double x = posx - ScrollX - ((posx - ScrollX) - dst.x) / ANGLESIZE * i;

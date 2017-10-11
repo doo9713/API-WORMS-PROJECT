@@ -19,6 +19,7 @@
 
 using namespace std;
 
+#include "GameSound.hpp"
 #include "Constant.h"
 #include "Macro.h"
 #include "Struct.h"

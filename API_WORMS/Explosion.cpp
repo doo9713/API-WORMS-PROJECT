@@ -4,6 +4,7 @@
 CExplosion::CExplosion(const char * _name, TAG _tag, LAYER _layer, MathF::VECTOR _pos)
 	: CObj(_name, _tag, _layer, _pos), index(0)
 {
+	gSndController->Play("Explo");
 }
 
 CExplosion::~CExplosion()

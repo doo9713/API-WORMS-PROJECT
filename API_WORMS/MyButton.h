@@ -3,21 +3,22 @@
 
 class CMyButton : public CObj
 {
-protected :
+protected:
 	string state;
 	int sizeX;
 	int sizeY;
-public :
-	CMyButton(const char * _name, TAG _tag,	LAYER _layer, MathF::VECTOR _pos, int _sizex, int _sizey);
+	bool FirstInto;
+public:
+	CMyButton(const char * _name, TAG _tag, LAYER _layer, MathF::VECTOR _pos, int _sizex, int _sizey);
 	~CMyButton();
-public :
+public:
 	virtual void Destroy() = 0;
 	virtual bool active(CObj& My, CObj& Other) = 0;
 	virtual void reactive(CObj& My, CObj& Other) = 0;
-public :
+public:
 	void Update();
 	void Render();
-public :
+public:
 	bool IntoBt();
 	virtual void ClickBt() = 0;
 };

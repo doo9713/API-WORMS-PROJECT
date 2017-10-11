@@ -25,6 +25,13 @@ BOOL CMainMenu::Initialize()
 	FrameTime = 0;
 
 	// TODO : Initialize Game
+	/* Sound Initialize */
+	gSndController->Init(4);
+	gSndController->LoadSound("MainSong", "./Resource/Sound/Main.mp3", true);
+	gSndController->LoadSound("ButtonPress", "./Resource/Sound/ButtonPress.mp3");
+	gSndController->LoadSound("ButtonInto", "./Resource/Sound/ButtonInto.mp3");
+	gSndController->Play("MainSong");
+
 	/* BackGround */
 	BITMAP.LoadBackground("BG.bmp",
 	{
@@ -66,6 +73,7 @@ BOOL CMainMenu::Initialize()
 
 BOOL CMainMenu::Update()
 {
+	gSndController->Update();
 	TIME.Set();
 	KEY.Set();
 	OBJ.Update();

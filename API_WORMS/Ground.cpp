@@ -31,13 +31,13 @@ void CGround::Update()
 void CGround::Render()
 {
 	// TODO : Object Render
-	BITMAP.TransparentBlt(name, 0, Pos.x, Pos.y, RGB(255,255,255));
+	BITMAP.TransparentBlt(name, 0, Pos.x, Pos.y, RGB(255, 255, 255));
 }
 
 bool CGround::IsGroundCheck(MathF::VECTOR check, int data)
 {
 	for (int i = 0; i < TILESIZEXY; ++i)
-		if (MathF::Distance(CollisionPos[i], check) <= data)
+		if (check.y > 400 && MathF::Distance(CollisionPos[i], check) <= data)
 			return true;
 	return false;
 }

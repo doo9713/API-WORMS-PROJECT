@@ -27,5 +27,5 @@ void CTitleUI::Update()
 
 void CTitleUI::Render()
 {
-	BITMAP.TransparentUIBlt(name, 0, Pos.x, Pos.y, RGB(255, 255, 255));
+	BITMAP.TransparentUIBlt(name, 0, Pos.x, Pos.y);
 }

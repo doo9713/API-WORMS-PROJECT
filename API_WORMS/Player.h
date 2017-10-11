@@ -5,11 +5,12 @@
 
 class CPlayer : public CObj
 {
-private :
+private:
 	static bool isOver;
 	static int playerTurn;
-	static string playerList[2];
-private :
+	static int playerCnt;
+	static string playerList[4];
+private:
 	bool isGround;
 	int index;
 	double health;
@@ -17,14 +18,14 @@ private :
 	double powergage;
 	string Dir;
 	string State;
-public :
+public:
 	CPlayer(const char * _name, TAG _tag, LAYER _layer, MathF::VECTOR _pos);
 	~CPlayer();
-public :
-	static void TurnChange() 
-	{ 
-		playerTurn = MathF::ClampCycle(playerTurn + 1, 0, 1); 
-		isOver = false; 
+public:
+	static void TurnChange()
+	{
+		playerTurn = MathF::ClampCycle(playerTurn + 1, 0, PLAYERMAX - 1);
+		isOver = false;
 		CTimeUI::SetTimeMax();
 	}
 public:
@@ -34,10 +35,10 @@ public:
 	double GetGage() { return powergage; }
 	string GetState() { return State; }
 	MathF::VECTOR GetCenter() { return Pos + 18; }
-public :
+public:
 	bool active(CObj& My, CObj& Other);
 	void reactive(CObj& My, CObj& Other);
-public :
+public:
 	void Update();
 	void Render();
 };
