@@ -1,0 +1,104 @@
+﻿  App.cpp
+d:\문서\github\api-worms-project\api_worms\BitmapManager.h(85): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\BitmapManager.h(86): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\Player.h(27): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Bar.cpp
+d:\문서\github\api-worms-project\api_worms\BitmapManager.h(85): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\BitmapManager.h(86): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\Player.h(27): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  BitmapManager.cpp
+d:\문서\github\api-worms-project\api_worms\BitmapManager.h(85): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\BitmapManager.h(86): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+BitmapManager.cpp(130): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+BitmapManager.cpp(147): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Cloud.cpp
+d:\문서\github\api-worms-project\api_worms\BitmapManager.h(85): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\BitmapManager.h(86): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+Cloud.cpp(33): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  ExitButton.cpp
+d:\문서\github\api-worms-project\api_worms\BitmapManager.h(85): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\BitmapManager.h(86): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Explosion.cpp
+d:\문서\github\api-worms-project\api_worms\BitmapManager.h(85): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\BitmapManager.h(86): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\Player.h(27): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+Explosion.cpp(33): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+Explosion.cpp(35): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+Explosion.cpp(38): warning C4305: '-=': 'double'에서 'float'(으)로 잘립니다.
+Explosion.cpp(46): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  FireGage.cpp
+d:\문서\github\api-worms-project\api_worms\BitmapManager.h(85): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\BitmapManager.h(86): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\Player.h(27): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+FireGage.cpp(33): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+FireGage.cpp(34): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  GamePlay.cpp
+d:\문서\github\api-worms-project\api_worms\BitmapManager.h(85): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\BitmapManager.h(86): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\Player.h(27): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Ground.cpp
+d:\문서\github\api-worms-project\api_worms\BitmapManager.h(85): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\BitmapManager.h(86): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+Ground.cpp(35): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Health.cpp
+d:\문서\github\api-worms-project\api_worms\BitmapManager.h(85): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\BitmapManager.h(86): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\Player.h(27): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+Health.cpp(33): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+Health.cpp(34): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  KeyManager.cpp
+  Main.cpp
+  Bomb.cpp
+d:\문서\github\api-worms-project\api_worms\BitmapManager.h(85): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\BitmapManager.h(86): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\Player.h(27): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+Bomb.cpp(54): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+Bomb.cpp(66): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  MainMenu.cpp
+d:\문서\github\api-worms-project\api_worms\BitmapManager.h(85): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\BitmapManager.h(86): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  MyButton.cpp
+d:\문서\github\api-worms-project\api_worms\BitmapManager.h(85): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\BitmapManager.h(86): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+MyButton.cpp(24): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Obj.cpp
+d:\문서\github\api-worms-project\api_worms\BitmapManager.h(85): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\BitmapManager.h(86): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  ObjList.cpp
+d:\문서\github\api-worms-project\api_worms\BitmapManager.h(85): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\BitmapManager.h(86): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\Player.h(27): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Player.cpp
+d:\문서\github\api-worms-project\api_worms\BitmapManager.h(85): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\BitmapManager.h(86): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\Player.h(27): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+Player.cpp(94): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+Player.cpp(152): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+Player.cpp(155): warning C4305: '-=': 'double'에서 'float'(으)로 잘립니다.
+Player.cpp(164): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+Player.cpp(168): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+Player.cpp(170): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+Player.cpp(173): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  StartButton.cpp
+d:\문서\github\api-worms-project\api_worms\BitmapManager.h(85): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\BitmapManager.h(86): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Tile.cpp
+d:\문서\github\api-worms-project\api_worms\BitmapManager.h(85): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\BitmapManager.h(86): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  컴파일하고 있습니다...
+  TimeManager.cpp
+  TimeUI.cpp
+d:\문서\github\api-worms-project\api_worms\BitmapManager.h(85): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\BitmapManager.h(86): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\Player.h(27): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+TimeUI.cpp(58): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+TimeUI.cpp(59): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  TitleUI.cpp
+d:\문서\github\api-worms-project\api_worms\BitmapManager.h(85): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\문서\github\api-worms-project\api_worms\BitmapManager.h(86): warning C4244: '=': 'double'에서 'INT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+TitleUI.cpp(30): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  코드를 생성하고 있습니다.
+  All 1432 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  코드를 생성했습니다.
+  API_WORMS.vcxproj -> D:\문서\GitHub\API-WORMS-PROJECT\API_WORMS\x64\Release\API_WORMS.exe
+  API_WORMS.vcxproj -> D:\문서\GitHub\API-WORMS-PROJECT\API_WORMS\x64\Release\API_WORMS.pdb (Full PDB)
